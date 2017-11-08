@@ -1,3 +1,16 @@
 .DS_Store
 node_modules
 build
+.eslintrc.json
+<<<<<<< HEAD
+Gruntfile.json
+package-lock.json
+package.json
+=======
+Gruntfile.js
+package-lock.json
+package.json
+.DS_Store
+node_modules
+build
+>>>>>>> 44878f14bb7caf976d81c272ef94b307abbb25a5
