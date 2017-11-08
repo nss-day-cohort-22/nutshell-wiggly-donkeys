@@ -25,7 +25,5 @@ Database.articles.push(newArticle);
 // Sort the articles by their `id` property, descending
 Database.articles.sort((p, n) => n.id - p.id);
 
-// Serialize and store database
-localStorage.setItem("Database", JSON.stringify(Database));
 })
 

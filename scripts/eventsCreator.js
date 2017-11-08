@@ -25,7 +25,5 @@ Database.events.push(newEvent);
 // Sort the events by their `id` property, descending
 Database.events.sort((p, n) => n.id - p.id);
 
-// Serialize and store database
-localStorage.setItem("Database", JSON.stringify(Database));
 })
 
