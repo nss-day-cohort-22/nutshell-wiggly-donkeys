@@ -2,6 +2,10 @@
 node_modules
 build
 .eslintrc.json
+<<<<<<< HEAD
 Gruntfile.json
+=======
+Gruntfile.js
+>>>>>>> master
 package-lock.json
 package.json
