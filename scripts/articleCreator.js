@@ -1,3 +1,7 @@
+//John Dulaney
+// This file adds some starting structure for our Article Form.
+
+
 // Add click event listener to the save button
 const saveArticleEl = document.getElementById("articleForm__saveButt").
 addEventListener("click", event => {

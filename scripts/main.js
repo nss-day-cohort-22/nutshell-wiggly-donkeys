@@ -1,1 +1,2 @@
-const articleFactory = require("./articleFactory.js")
+// Authors : Chase, John, Max, and Paul
+// Purpose : ¯\_(ツ)_/¯ 
