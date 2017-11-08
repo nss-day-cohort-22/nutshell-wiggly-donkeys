@@ -29,4 +29,4 @@ const saveTaskEl = document.getElementById("taskForm__saveButt").
         Database.tasks.sort((p, n) => p.taskId + n.taskId);
     });
 
-module.exports = null
+// module.exports = null
