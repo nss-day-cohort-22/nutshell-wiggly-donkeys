@@ -8,7 +8,7 @@ const eventsCreator = require("./eventsCreator");
 const articleCreator = require("./articleCreator.js")
 const taskCreator = require("./taskCreator")
 
-// DB
+// Database
 const Database = {
     "messages" : messages,
     "users" : users,

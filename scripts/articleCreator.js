@@ -5,6 +5,9 @@
 const articleFactory = require("./articleFactory")
 const Database = require("./Database.js")
 
+//Create empty array if we need it
+Database.articles = Database.articles || []
+
 // Add click event listener to the save button
 const saveArticleEl = document.getElementById("articleForm__saveButt").
 addEventListener("click", event => {
@@ -25,3 +28,4 @@ Database.articles.sort((p, n) => n.id - p.id);
 // Serialize and store database
 localStorage.setItem("Database", JSON.stringify(Database));
 })
+
