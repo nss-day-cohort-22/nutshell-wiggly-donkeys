@@ -21,5 +21,5 @@ const Database = {
 // Serialize and store database
 localStorage.setItem("Database", JSON.stringify(Database));
 
-module.exports = Database 
+module.exports = Database
 
