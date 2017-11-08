@@ -1,6 +1,8 @@
 //John Dulaney
 // This file adds some starting structure for our Article Form.
 
+//imports
+const articleFactory = require("./articleFactory")
 
 // Add click event listener to the save button
 const saveArticleEl = document.getElementById("articleForm__saveButt").
