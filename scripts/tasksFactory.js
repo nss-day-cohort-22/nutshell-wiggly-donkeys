@@ -1,6 +1,6 @@
 //Author:Chase Steely
 //Purpose: To create a factory of tasks.
-
+const idGenerator = require("./idGenerator")
 const taskIdGen = idGenerator()
 
  // Factory function for new articles

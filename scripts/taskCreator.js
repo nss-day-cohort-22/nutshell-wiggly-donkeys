@@ -1,3 +1,8 @@
+//Author:Chase Steely
+//Purpose: To create a task and send it to database.
+
+const taskFactory = require("./taskFactory")
+
 // Add click event listener to the save button
 const saveTaskEl = document.getElementById("taskForm__saveButt").
 addEventListener("click", event => {
@@ -16,8 +21,10 @@ addEventListener("click", event => {
     Database.tasks.push(newTask);
 
    // Sort the task by their `id` property, descending
-    Database.tasks.sort((p, n) => p.id + n.id);
+    Database.tasks.sort((p, n) => p.taskId + n.taskId);
 
    // Serialize and store database
     localStorage.setItem("Database", JSON.stringify(Database));
 });
+
+module.exports = null
