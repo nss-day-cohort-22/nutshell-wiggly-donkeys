@@ -35,4 +35,4 @@ const eventsFactory = (userId, name, date, location) => {
 }
 
 //exports
-module.exports = eventsFactory 
+module.exports = eventsFactory

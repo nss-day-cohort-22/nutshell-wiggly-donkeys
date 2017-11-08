@@ -35,4 +35,4 @@ const articleFactory = (userId, url, note, date) => {
 }
 
 //exports
-module.exports = articleFactory 
+module.exports = articleFactory
