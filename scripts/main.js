@@ -1,0 +1,1 @@
+const articleFactory = require("./articleFactory.js")
