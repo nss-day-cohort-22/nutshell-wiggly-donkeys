@@ -1,0 +1,6 @@
+#regForm {
+    padding: 2em;
+    margin: auto;
+    z-index: 1;
+    border: 1px solid tomato;
+}
