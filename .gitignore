@@ -5,3 +5,6 @@ build
 Gruntfile.js
 package-lock.json
 package.json
+.DS_Store
+node_modules
+build
