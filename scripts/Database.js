@@ -18,3 +18,8 @@ const Database = {
     "connections" : connections,
 }
 
+// Serialize and store database
+localStorage.setItem("Database", JSON.stringify(Database));
+
+module.exports = Database 
+
