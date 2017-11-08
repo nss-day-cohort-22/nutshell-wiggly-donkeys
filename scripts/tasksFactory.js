@@ -29,4 +29,4 @@ const taskIdGen = idGenerator()
     });
 };
 
-module.exports = taskFactory
+module.exports = taskFactory()

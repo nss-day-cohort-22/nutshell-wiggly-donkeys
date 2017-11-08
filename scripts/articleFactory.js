@@ -12,27 +12,32 @@ const articleFactory = (userId, url, note, date) => {
     return Object.create(null, {
         "id":{
             value: articleIdGenerator.next().value,
-            enumerable: true
+            enumerable: true,
+            writable: true
         },
         "userId":{
             value: userId,  //function coming soon
-            enumerable: true
+            enumerable: true,
+            writable: true
         },
         "url":{
             value: url,
-            enumerable: true
+            enumerable: true,
+            writable: true
         },
         "note":{
             value: note,
-            enumerable: true
+            enumerable: true,
+            writable: true
         },
         "date":{
             value: Date.now(),
-            enumerable: true
+            enumerable: true,
+            writable: true
             }
         }
     )
 }
 
 //exports
-module.exports = articleFactory
+module.exports = articleFactory()
