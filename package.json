@@ -16,5 +16,8 @@
     "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^20.1.0"
+  },
+  "dependencies": {
+    "grunt-contrib-uglify": "^3.1.0"
   }
 }
