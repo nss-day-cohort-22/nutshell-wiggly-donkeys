@@ -39,7 +39,7 @@ module.exports = function (grunt) {
         ],
       },
     });
-   // Load the plugin that provides the "uglify" task.
+// Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-eslint");
