@@ -1,10 +1,26 @@
-//Author: Paul Ellis; Purpose: create user database
-const makeUsers = require("./usersObjectCreate");
+//Author: Paul Ellis; Purpose: function that creates new users
 
-const usersDB = [];
-usersDB.push(makeUsers("Paul", "paul@nuts.com"));
-usersDB.push(makeUsers("John", "john@nuts.com"));
-usersDB.push(makeUsers("Max", "max@nuts.com"));
-usersDB.push(makeUsers("Chase", "chase@nuts.com"));
+const idGenerator = require("./idGenerator");
+const userIdGen = idGenerator();
 
-module.exports = usersDB;
+const usersFactory = (name, email) => {
+    return Object.create(null, {
+        "userId":
+        {
+            enumerable: true,
+            value: userIdGen.next().value
+        },
+        "username":
+        {
+            enumerable: true,
+            value: name
+        },
+        "email":
+        {
+            enumerable: true,
+            value: email
+        }
+    })
+}
+
+module.exports = usersFactory

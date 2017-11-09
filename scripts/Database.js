@@ -3,7 +3,7 @@
 
 //imports - Add as we go boys
 const messages = require("./messagesFactory");
-const users = require("./usersFactory");
+const users = require("./usersCreator");
 const events = require("./eventsFactory");
 const articles = require("./articleFactory.js")
 const tasks = require("./tasksFactory")
