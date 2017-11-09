@@ -1,6 +1,7 @@
 //Author:Chase Steely
 //Purpose: To create a factory of tasks.
 const idGenerator = require("./idGenerator")
+const Database = require("./Database")
 const taskIdGen = idGenerator()
 
  // Factory function for new articles
@@ -11,7 +12,7 @@ const taskIdGen = idGenerator()
             enumerable: true,
         },
         "userId": {
-            value: userId,//function
+            value: Database.users[userId],
             enumerable: true,
         },
         "taskName": {
@@ -29,4 +30,4 @@ const taskIdGen = idGenerator()
     });
 };
 
-module.exports = taskFactory()
+module.exports = taskFactory

@@ -1,7 +1,7 @@
 //Author:Chase Steely
 //Purpose: To create a task and send it to database.
-
 const taskFactory = require("./taskFactory")
+const taskForm = require("./taskForm")
 const Database = require("./Database")
 
 // Create `tasks` key if it doesn't exist
@@ -18,8 +18,7 @@ const saveTaskEl = document.getElementById("taskForm__saveButt").
         // Create a new task object
         const newTask = taskFactory(
             document.querySelector("input[name='taskForm__taskName']").value,
-            document.querySelector("input[name='taskForm__completionDate']").value,
-            document.querySelector("ckeckbox[name='taskForm__completed']").value
+            document.querySelector("input[name='taskForm__completionDate']").value
         );
 
         // Add new task to array
