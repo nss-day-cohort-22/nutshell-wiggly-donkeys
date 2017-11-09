@@ -21,7 +21,7 @@ const usersCreator = register => {
             const newUser = userMaker(regUsername, regEmail);//make new user object
             storageDatabase.users.push(newUser);//add new user object to users array in local storage pull
             localStorage.setItem("Database", JSON.stringify(storageDatabase))//send new storage back to local
-            sessionStorage.setItem("currentUser", JSON.stringify(newUser))//set session storage to new user
+            sessionStorage.setItem("currentUser", JSON.stringify(newUser.userId))//set session storage to new user
             //hide form and populate dashboard
         }
     })
