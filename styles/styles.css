@@ -4,3 +4,7 @@
     z-index: 1;
     border: 1px solid tomato;
 }
+
+.hidden {
+    display: none;
+}
