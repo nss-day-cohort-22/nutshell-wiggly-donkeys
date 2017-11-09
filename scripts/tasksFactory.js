@@ -5,7 +5,7 @@ const Database = require("./Database")
 const taskIdGen = idGenerator()
 
  // Factory function for new articles
- const taskFactory = function (taskName, completionDate, completed) {
+ const taskFactory = function (taskName, completionDate) {
     return Object.create(null, {
         "taskId": {
             value: taskIdGen.next().value,

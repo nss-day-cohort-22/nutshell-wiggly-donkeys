@@ -3,11 +3,11 @@
 const taskEl = document.getElementById("tasks")
 
 const newTask = () => {
-    `
+   taskEl.innerHTML += `
     <div class="button">
-        <button id="taskForm__saveButt">New Task</button>
+        <button id="taskForm__newButt">New Task</button>
     </div>
-    <form class="taskFrom hidden">
+    <form id="taskForm" class="taskForm hidden">
         <div>
             <label for="taskForm__taskName">Name:</label>
             <input type="text" id="taskForm__taskName" name="taskForm__taskName">

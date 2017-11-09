@@ -11,6 +11,13 @@ Database.tasks = Database.tasks || [];
 // Sort the task by their `id` property, descending
 Database.tasks.sort((p, n) => p.taskId + n.taskId);
 
+
+const showForm = document.getElementById("taskForm__newButt").
+    addEventListener("click", event => {
+        document.getElementById("taskForm").classList.remove("hidden")
+    });
+
+
 // Add click event listener to the save button
 const saveTaskEl = document.getElementById("taskForm__saveButt").
     addEventListener("click", event => {
@@ -27,5 +34,4 @@ const saveTaskEl = document.getElementById("taskForm__saveButt").
         // Sort the task by their `id` property
         Database.tasks.sort((p, n) => p.taskId + n.taskId);
     });
-
 module.exports = null
