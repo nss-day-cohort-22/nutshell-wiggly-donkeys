@@ -22,7 +22,9 @@ const usersCreator = register => {
             Database.users.push(newUser);//add new user object to users array in local storage pull
             localStorage.setItem("Database", JSON.stringify(Database))//send new storage back to local
             sessionStorage.setItem("currentUser", JSON.stringify(newUser.userId))//set session storage to new user
-            //hide form and populate dashboard
+            document.getElementById("regForm").classList.remove("d-flex")
+            document.getElementById("regForm").classList.add("hidden")
+            //populate dashboard
         }
     })
 }
