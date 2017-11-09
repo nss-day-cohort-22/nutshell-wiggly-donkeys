@@ -15,7 +15,7 @@ const articleFactory = (userId, url, note, date) => {
             enumerable: true
         },
         "userId":{
-            value: userId,  //function coming soon
+            value: Database.users[userId],  //function coming soon
             enumerable: true
         },
         "url":{

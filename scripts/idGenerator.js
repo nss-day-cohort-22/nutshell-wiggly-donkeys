@@ -9,4 +9,4 @@ const idGenerator = function* (startFrom = 0) {
     }
 }
 
-module.exports = idGenerator();
+module.exports = idGenerator

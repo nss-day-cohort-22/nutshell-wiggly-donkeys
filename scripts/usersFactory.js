@@ -23,8 +23,4 @@ const usersFactory = (name, email) => {
     })
 }
 
-<<<<<<< HEAD
-module.exports = usersFactory();
-=======
 module.exports = usersFactory
->>>>>>> master
