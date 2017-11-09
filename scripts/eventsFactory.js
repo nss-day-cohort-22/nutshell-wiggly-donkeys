@@ -3,19 +3,21 @@
 
 //imports
 const idGenerator = require("./idGenerator")
+const Database = require("./Database");
+
 
 //calling the idgenerator function
 const eventsIdGenerator = idGenerator();
 
 //factory for eventss
-const eventsFactory = (userId, name, date, location) => {
+const eventsFactory = (name, date, location) => {
     return Object.create(null, {
         "id":{
             value: eventsIdGenerator.next().value,
             enumerable: true
         },
         "userId":{
-            value: userId,  //function coming soon
+            value: Database.users[userId],  //function coming soon
             enumerable: true
         },
         "name":{
@@ -35,4 +37,4 @@ const eventsFactory = (userId, name, date, location) => {
 }
 
 //exports
-module.exports = eventsFactory()
+module.exports = eventsFactory

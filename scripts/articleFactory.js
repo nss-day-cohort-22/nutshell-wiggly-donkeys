@@ -3,12 +3,13 @@
 
 //imports
 const idGenerator = require("./idGenerator")
+const Database = require("./Database");
 
 //calling the idgenerator function
 const articleIdGenerator = idGenerator();
 
 //factory for Articles
-const articleFactory = (userId, url, note, date) => {
+const articles = (url, note, date) => {
     return Object.create(null, {
         "id":{
             value: articleIdGenerator.next().value,
@@ -16,7 +17,7 @@ const articleFactory = (userId, url, note, date) => {
             writable: true
         },
         "userId":{
-            value: userId,  //function coming soon
+            value: Database.users[userId], 
             enumerable: true,
             writable: true
         },
@@ -40,4 +41,4 @@ const articleFactory = (userId, url, note, date) => {
 }
 
 //exports
-module.exports = articleFactory()
+module.exports = articles

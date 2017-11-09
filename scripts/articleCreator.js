@@ -3,7 +3,7 @@
 
 //imports
 const articleFactory = require("./articleFactory")
-const Database = require("./Database.js")
+const Database = require("./Database")
 
 //Create empty array if we need it
 Database.articles = Database.articles || []
