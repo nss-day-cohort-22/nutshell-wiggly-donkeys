@@ -17,3 +17,8 @@ const Database = {
     "tasks" : tasks,
     // "connections" : connections
 }
+
+// Serialize and store database
+localStorage.setItem("Database", JSON.stringify(Database));
+
+module.exports = Database
