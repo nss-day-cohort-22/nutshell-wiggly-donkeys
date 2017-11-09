@@ -1,12 +1,15 @@
-mainEl = document.getElementById("main");
+const addMessageForm = function () {
 
-mainEl.innerHTML += `
-    <div id="messages">
+    messageEl = document.getElementById("messages");
+
+    messageEl.innerHTML += `
         <div id="messageForm">
             <h2 id=messageForm_title>New Message</h2>
             <textarea id=messageForm_text rows="4" cols= "20"></textarea>
             <button id="messageForm_saveButt">Send</button>
         </div>
         <div id="messageOutput">
-        </div>
-    </div>`
+        </div>`
+}
+
+module.exports = addMessageForm
