@@ -1,8 +1,10 @@
+.gitignore
 .DS_Store
 node_modules
 build
 .eslintrc.json
 Gruntfile.json
+Gruntfile.js
 package-lock.json
 package.json
 
