@@ -1,7 +1,7 @@
 .DS_Store
-Gruntfile.js
 node_modules
 build
 .eslintrc.json
+Gruntfile.js
 package-lock.json
 package.json

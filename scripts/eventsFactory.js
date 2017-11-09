@@ -10,7 +10,7 @@ const Database = require("./Database");
 const eventsIdGenerator = idGenerator();
 
 //factory for eventss
-const eventsFactory = (name, date, location) => {
+const eventsFactory = (userId, name, date, location) => {
     return Object.create(null, {
         "id":{
             value: eventsIdGenerator.next().value,
