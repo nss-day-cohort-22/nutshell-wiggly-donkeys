@@ -1,13 +1,14 @@
-//Author: Paul Ellis; Purpose: create user database
+//Author: Paul Ellis; Purpose: function that creates new users
+
 const idGenerator = require("./idGenerator");
 const userIdGen = idGenerator();
 
-const usersFactory = function(name, email) {
-    Object.create(null, {
+const usersFactory = (name, email) => {
+    return Object.create(null, {
         "userId":
         {
             enumerable: true,
-                value: userIdGen.next().value
+            value: userIdGen.next().value
         },
         "username":
         {
@@ -19,8 +20,7 @@ const usersFactory = function(name, email) {
             enumerable: true,
             value: email
         }
-        })
-    }
+    })
+}
 
-
-module.exports = usersFactory;
+module.exports = usersFactory
