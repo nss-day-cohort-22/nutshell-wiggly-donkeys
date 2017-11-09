@@ -6,7 +6,7 @@ const articleFactory = require("./articleFactory")
 const Database = require("../Database")
 
 // get article
-const articleEl = document.getElementById("XXXXXXXXXXx")
+const articleEl = document.getElementById("articles")
 
 //function for scope
 const articleDOM = (article) => {
@@ -20,7 +20,7 @@ const articleDOM = (article) => {
         <br>
         </article>
         `
-    })
+    })()
 }
 
 module.exports = articleDOM
