@@ -1,6 +1,6 @@
 //Author: MW - Purpose: create messages factory
-const idGenerator = require("./idGenerator")
-const Database = require("./Database");
+const idGenerator = require("../idGenerator")
+const Database = require("../Database");
 
 const messagesIdGenerator = idGenerator();
 

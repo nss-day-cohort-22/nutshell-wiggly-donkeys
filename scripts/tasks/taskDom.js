@@ -1,6 +1,6 @@
 //Author:Chase Steely
 //Purpose: To create a task and send it to database.
-const Database = require("./Database")
+const Database = require("../Database")
 
 const taskEl = document.getElementById("tasks");
 

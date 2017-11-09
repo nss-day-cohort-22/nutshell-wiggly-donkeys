@@ -2,8 +2,8 @@
 // This fine piece of butchered code creates a factory for storing events in our nutshellDB
 
 //imports
-const idGenerator = require("./idGenerator")
-const Database = require("./Database");
+const idGenerator = require("../idGenerator")
+const Database = require("../Database");
 
 
 //calling the idgenerator function

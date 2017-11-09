@@ -3,7 +3,7 @@
 
 //imports
 const articleFactory = require("./articleFactory")
-const Database = require("./Database")
+const Database = require("../Database")
 
 // get article
 const articleEl = document.getElementById("XXXXXXXXXXx")
