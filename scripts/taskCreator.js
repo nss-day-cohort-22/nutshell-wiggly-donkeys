@@ -21,7 +21,7 @@ const showForm = document.getElementById("taskForm__newButt").
 // Add click event listener to the save button
 const saveTaskEl = document.getElementById("taskForm__saveButt").
     addEventListener("click", event => {
-
+        document.getElementById("taskForm").classList.add("hidden")
         // Create a new task object
         const newTask = taskFactory(
             document.querySelector("input[name='taskForm__taskName']").value,

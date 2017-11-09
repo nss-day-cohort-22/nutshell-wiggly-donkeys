@@ -13,8 +13,8 @@ const newTask = () => {
             <input type="text" id="taskForm__taskName" name="taskForm__taskName">
         </div>
         <div>
-            <label for="taskForm__completionDate">Expected Completion Date (mm/dd/yy)</label>
-            <input type="text" id="taskForm__completionDate" name="taskForm__completionDate">
+            <label for="taskForm__completionDate">Expected Completion Date</label>
+            <input type="datetime" name="taskForm__completionDate" id="taskForm__completionDate">
         </div>
         <div class="button">
             <button id="taskForm__saveButt">Save Task</button>
