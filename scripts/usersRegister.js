@@ -24,7 +24,7 @@ const usersCreator = register => {
             sessionStorage.setItem("currentUser", JSON.stringify(newUser.userId))//set session storage to new user
             document.getElementById("regForm").classList.remove("d-flex")
             document.getElementById("regForm").classList.add("hidden")
-            dashboardDOM();
+            // dashboardDOM();
         }
     })
 }

@@ -7,7 +7,7 @@ const newTask = () => {
     <div class="button">
         <button id="taskForm__newButt">New Task</button>
     </div>
-    <form id="taskForm" class="taskForm hidden">
+    <form id="taskForm" class="taskForm">
         <div>
             <label for="taskForm__taskName">Name:</label>
             <input type="text" id="taskForm__taskName" name="taskForm__taskName">
