@@ -1,6 +1,10 @@
 //Author: Paul Ellis; Purpose: create user database
-const users = [];
-usersDB = setusers => {
-    if (localStorage.getItem("Database") === null) { return users }
-}
-module.exports = usersDB();
+const makeUsers = require("./usersObjectCreate");
+
+const usersDB = [];
+usersDB.push(makeUsers("Paul", "paul@nuts.com"));
+usersDB.push(makeUsers("John", "john@nuts.com"));
+usersDB.push(makeUsers("Max", "max@nuts.com"));
+usersDB.push(makeUsers("Chase", "chase@nuts.com"));
+
+module.exports = usersDB;

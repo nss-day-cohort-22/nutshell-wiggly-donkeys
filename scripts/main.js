@@ -2,4 +2,3 @@
 // Purpose : ¯\_(ツ)_/¯
 const Database = require("./Database");
 const registration_login = require("./usersCreator");
-const testing = require("./usersObjectCreate");
