@@ -2,7 +2,7 @@
 
 //the creator requires the messagesFactory
 const messagesFactory = require("./messagesFactory");
-const Database = require("./Database.js");
+const Database = require("./Database");
 
 Database.messages = Database.messages || [];
 
@@ -23,3 +23,6 @@ const messageButtonEl = document.getElementById("messageForm__saveButton").addEv
     Database.messages.sort((p, n) => p.messageId + n.messageId);
 
 })
+
+module.exports = messagesCreator;
+

@@ -23,4 +23,4 @@ const usersFactory = function(name, email) {
     }
 
 
-module.exports = usersFactory;
+module.exports = usersFactory();

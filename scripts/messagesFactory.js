@@ -21,4 +21,4 @@ const messagesFactory = (message) => {
     })
 }
 
-module.exports = messagesFactory;
+module.exports = messagesFactory();

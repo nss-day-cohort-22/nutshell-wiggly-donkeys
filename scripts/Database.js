@@ -2,11 +2,11 @@
 // Purpose : Nutshell's Database
 
 //imports - Add as we go boys
-const messagesCreator = require("./messagesCreator");
-const userCreator = require("./usersCreator");
-const eventsCreator = require("./eventsCreator");
-const articleCreator = require("./articleCreator.js")
-const taskCreator = require("./taskCreator")
+const messagesFactory = require("./messagesFactory");
+const userFactory = require("./usersFactory");
+const eventsFactory = require("./eventsFactory");
+const articleFactory = require("./articleFactory")
+const tasksFactory = require("./tasksFactory")
 
 // Database
 const Database = {
@@ -17,9 +17,3 @@ const Database = {
     "tasks" : tasks,
     "connections" : connections,
 }
-
-// Serialize and store database
-localStorage.setItem("Database", JSON.stringify(Database));
-
-module.exports = Database
-
