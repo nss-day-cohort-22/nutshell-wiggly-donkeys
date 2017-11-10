@@ -1,5 +1,6 @@
 //John Dulaney
 // This file adds some starting structure for our Article Create Form.
+//┌(° ͜ʖ͡°)┘
 
 //imports
 const articleFactory = require("./articleFactory")
@@ -10,7 +11,7 @@ localStorage.setItem("Database", JSON.parse(Database))
 Database.articles = Database.articles || []
 
 // Add click event listener to the save button
-const saveArticleEl = document.getElementById("articleForm__saveButt").
+const saveArticleEl = document.getElementById("articleForm__saveButt")
     addEventListener("click", event => {
 
 // Create a new article object
@@ -31,9 +32,3 @@ const saveArticleEl = document.getElementById("articleForm__saveButt").
 
 })
 
-//delete button function
-function deleteCard() {
-    if (event.target.id.startsWith("button_")) {
-        event.target.parentNode.remove()
-    }
-}
