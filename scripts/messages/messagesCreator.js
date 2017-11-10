@@ -4,9 +4,13 @@
 
 //the creator requires the messagesFactory
 const messagesFactory = require("./messagesFactory");
+<<<<<<< HEAD:scripts/messagesCreator.js
 
 //pull the database from local storage
 const Database = JSON.parse(localStorage.getItem("Database"))
+=======
+const Database = require("../Database.js");
+>>>>>>> master:scripts/messages/messagesCreator.js
 
 Database.messages = Database.messages || [];
 
