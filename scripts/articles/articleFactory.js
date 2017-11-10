@@ -17,14 +17,9 @@ const articles = (url, note, date) => {
             writable: true
         },
         "userId":{
-<<<<<<< HEAD:scripts/articleFactory.js
-            value: Database.users[userId],  //function coming soon
-            enumerable: true
-=======
-            value: Database.users[userId], 
+            value: Database.users[userId],
             enumerable: true,
             writable: true
->>>>>>> master:scripts/articles/articleFactory.js
         },
         "url":{
             value: url,
