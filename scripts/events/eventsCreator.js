@@ -3,7 +3,7 @@
 
 //imports
 const eventFactory = require("./eventFactory")
-const Database = require("./Database.js")
+const Database = require("../Database.js")
 
 //Create empty array if we need it
 Database.events = Database.events || []

@@ -1,5 +1,5 @@
 const Database = JSON.parse(localStorage.getItem("Database"))//access the main database
-// const dashboardDOM = require("./dashboard_DOM")
+const dashboardDOM = require("../dashboard_DOM")
 const userLogin = () => {
     document.getElementById("regForm_login").addEventListener("click", login => {
         const regUsername = document.getElementById("regForm_username").value;//get value of username field
