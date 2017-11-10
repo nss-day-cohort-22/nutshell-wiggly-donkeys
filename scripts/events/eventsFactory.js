@@ -2,7 +2,9 @@
 // This fine piece of butchered code creates a factory for storing events in our nutshellDB
 
 //imports
-const idGenerator = require("./idGenerator")
+const idGenerator = require("../idGenerator")
+const Database = require("../Database");
+
 
 //calling the idgenerator function
 const eventsIdGenerator = idGenerator();
@@ -15,7 +17,7 @@ const eventsFactory = (userId, name, date, location) => {
             enumerable: true
         },
         "userId":{
-            value: userId,  //function coming soon
+            value: Database.users[userId],  //function coming soon
             enumerable: true
         },
         "name":{

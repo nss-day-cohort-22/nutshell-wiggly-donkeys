@@ -2,7 +2,7 @@
 //Purpose: To create a task and send it to database.
 const taskFactory = require("./taskFactory")
 const taskForm = require("./taskForm")
-const Database = require("./Database")
+const Database = require("../Database")
 
 // Create `tasks` key if it doesn't exist
 Database.tasks = Database.tasks || [];

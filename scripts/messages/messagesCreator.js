@@ -2,7 +2,7 @@
 
 //the creator requires the messagesFactory
 const messagesFactory = require("./messagesFactory");
-const Database = require("./Database.js");
+const Database = require("../Database.js");
 
 Database.messages = Database.messages || [];
 

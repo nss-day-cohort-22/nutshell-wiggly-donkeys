@@ -2,7 +2,7 @@
 
 const usersFactory = require("./usersFactory");//pull function that creates users
 const Database = JSON.parse(localStorage.getItem("Database"))//access the main database
-
+const dashboardDOM = require("../dashboard_DOM");
 const usersCreator = register => {
     document.getElementById("regForm_saveButt").addEventListener("click", registration => {//when a user clicks save on registration form
         const regUsername = document.getElementById("regForm_username").value;//get value of username field
