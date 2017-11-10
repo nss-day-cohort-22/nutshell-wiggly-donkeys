@@ -2,7 +2,7 @@
 // Purpose : Nutshell's Database
 
 //imports - Add as we go boys
-const messages = require("./messagesFactory");
+const messages = require("./messagesCreator");
 const users = require("./usersCreator");
 const events = require("./eventsFactory");
 const articles = require("./articleFactory")

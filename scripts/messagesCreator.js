@@ -1,8 +1,12 @@
 //Author: MW - Purpose:create creator
 
+
+
 //the creator requires the messagesFactory
 const messagesFactory = require("./messagesFactory");
-const Database = require("./Database");
+
+//pull the database from local storage
+const Database = JSON.parse(localStorage.getItem("Database"))
 
 Database.messages = Database.messages || [];
 
@@ -16,13 +20,28 @@ const messageButtonEl = document.getElementById("messageForm__saveButton").addEv
     const newMessage = messagesFactory(
         document.querySelector("input[name='messageForm__message']").value
     );
-    // Add new task to array
+
+    //****clear textarea???****//
+    // function eraseText() {
+    //     document.getElementById("messageForm_text").value = "";
+    // }
+
+    // // Add new task to array
     Database.messages.push(newMessage);
 
-    // ReSort the task by their `id` property
+    // // ReSort the task by their `id` property
     Database.messages.sort((p, n) => p.messageId + n.messageId);
 
 })
 
-module.exports = messagesCreator;
+// const Database = JSON.parse(localStorage.getItem("Database"))
+// let messagesDb = messages => {
+//     if (Database === null) {
+//         const messagesInit = [];
+//         return messagesInit
+//         } else {return Database.messages}
+// }
+
+module.exports = messagesDb();
+
 
