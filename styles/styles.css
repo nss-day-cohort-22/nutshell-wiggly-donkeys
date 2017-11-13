@@ -8,3 +8,12 @@
 .hidden {
     display: none;
 }
+
+.regButts {
+    padding: 1em 2em;
+}
+
+.form {
+    margin: 35px;
+
+}

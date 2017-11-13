@@ -4,8 +4,11 @@
 //imports - Add as we go boys
 const users = require("./users/usersCreator");
 const events = require("./events/eventsFactory");
-const articles = require("./articles/articleFactory")
-const tasks = require("./tasks/tasksFactory")
+const articles = require("./articles/articleFactory");
+const tasks = require("./tasks/tasksFactory");
+const innerDB = require("./innerHTML/innerDB")
+const connections = require("./connections/connectionsCreator")
+
 
 // Database
 const Database = {
@@ -14,7 +17,8 @@ const Database = {
     "events" : events,
     "articles" : articles,
     "tasks" : tasks,
-    // "connections" : connections
+    "innerDB": innerDB,
+    "connections" : connections
 }
 console.log(Database)
 
