@@ -1,8 +1,6 @@
 //Author: MW - Purpose: create messages factory
 const idGenerator = require("../idGenerator")
-// const Database = require("../Database");
-
-const Database = JSON.parse(localStorage.getItem("Database"))
+const Database = require("./Database");
 
 const messagesIdGenerator = idGenerator();
 
@@ -13,8 +11,7 @@ const messagesFactory = (message) => {
             enumerable: true
         },
         "userId": {
-            //insert function to pull from session storage
-            value: Database.users.userId,
+            value: JSON.parse(sessionStorage.getItem("currentUser")),
             enumerable: true
         },
         "message": {
