@@ -1,6 +1,6 @@
 // John Dulaney
 // This fine piece of butchered code creates a factory for storing articles in our nutshellDB
-
+//┌(° ͜ʖ͡°)┘
 //imports
 const idGenerator = require("../idGenerator")
 const Database = require("../Database");
@@ -16,8 +16,8 @@ const articles = (url, note, date) => {
             enumerable: true,
             writable: true
         },
-        "userId":{
-            value: Database.users[userId],
+        "userId": {
+            value: JSON.parse(sessionStorage.getItem("currentUser")),
             enumerable: true,
             writable: true
         },

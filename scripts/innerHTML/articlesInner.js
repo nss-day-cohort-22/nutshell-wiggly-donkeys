@@ -7,17 +7,26 @@ const articlesHTML = {
     },
     "inner": {
         enumerable: true,
-        value: `<article>
-    <form name="article__form">
+        value: `<article class="form">
+        <form name="article__form">
+        <h2>Share fake news and annoy your friends!</h2>
         <label>Date</label>
-            <input type="date" name='articleForm__date' id="" value="Date">
+            <div class="form-group col-3">
+                <input type="date" name='articleForm__date' id="" class="form-control" value="" placeholder="">
+            </div>
         <label>URL</label>
-            <input type="text" name='articleForm__url' value="URL">
+            <div class="form-group col-3">
+                <input type="text" name='articleForm__url' value="" id="" class="form-control" placeholder="Link URL here.">
+            </div>
         <label>Note</label>
-            <textarea name="'articleForm__note'" id="note" name="Notes" cols="30" rows="10"></textarea>
-        <label>Post</label>
-            <input type="button" id="articleForm__saveButt" class="article__button" value="Post Article">
-    </form>`
+            <div class="form-group col-4">
+                <textarea name="'articleForm__note'" id="note" name="Notes" cols="30" rows="10" placeholder="Add a note about the article"></textarea>
+            </div>
+            <div class="form-group col-3">
+                <input type="button" id="articleForm__saveButt" class="article__button" value="Post Article">
+            </div>
+        </form>
+    </article>`
     }
 }
 
