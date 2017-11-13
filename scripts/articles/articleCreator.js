@@ -23,6 +23,9 @@ function articleStore() {
         );
         Database.articles.push(newArticle);
         localStorage.setItem("Database", JSON.stringify(Database));
+        // let Database = JSON.parse(localStorage.getItem("Database"))
+
+        document.forms["article__form"].reset();
     }
 }
 

@@ -3,31 +3,33 @@
 //┌(° ͜ʖ͡°)┘
 
 //imports
+const Database = require("../Database")
 const articleFactory = require("./articleFactory")
 const articleCreator = require("./articleCreator")
-const articleDelete = require("./articleDelete")
-const Database = require("../Database")
+// const articleDelete = require("./articleDelete")
 
-// get article
-const articleEl = document.getElementById("articles")
 
 //function for scope
-const articleDOM = (article) => {
-    const deleteButton = deleteArticle()
-    article.forEach(artPush => {
+const articleDOM = () => {
+    // get article
+    const articleEl = document.getElementById("article__post")
+    // const deleteButton = deleteArticle()
+    Database.articles.forEach(artPush => {
         articleEl.innerHTML += `
                 <br>
-    <article id=${Database.article.id}>
-        <div>Article you shared on ${Database.article.date}</div>
-            <div>${Database.article.userID}</div>
-            <div>${Database.article.url}</div>
-            <div>${Database.article.note}</div>
-            <input type="button" id="articleForm__deleteButt" class="article__button" value="Delete this article">
-            <div>${deleteButton}</div>
-                <br>
-    </article>
+    <article id=${artPush.id}>
+    <h1>out put here</h1>
+        
+        <div>Article you shared on ${artPush.date}</div>
+        <div>${artPush.url}</div>
+        <div>${artPush.note}</div>
+        <input type="button" id="articleForm__deleteButt" class="article__button" value="Delete this article">
+        <br>
+        </article>
         `
     })
 }
-
+    
+    // <div>${artPush.userID}</div>
+    // <dibv>${deleteButton}</dibv>
 module.exports = articleDOM

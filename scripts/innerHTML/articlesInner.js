@@ -7,7 +7,8 @@ const articlesHTML = {
     },
     "inner": {
         enumerable: true,
-        value: `<article class="form">
+        value: `
+    <article class="form">
         <form name="article__form">
         <h2>Share fake news and annoy your friends!</h2>
         <label>Date</label>
@@ -20,13 +21,29 @@ const articlesHTML = {
             </div>
         <label>Note</label>
             <div class="form-group col-4">
-                <textarea name="'articleForm__note'" id="note" name="Notes" cols="30" rows="10" placeholder="Add a note about the article"></textarea>
+                <textarea name="articleForm__note" id="note" name="Notes" cols="30" rows="10" placeholder="Add a note about the article"></textarea>
             </div>
             <div class="form-group col-3">
                 <input type="button" id="articleForm__saveButt" class="article__button" value="Post Article">
             </div>
         </form>
-    </article>`
+        </article>
+        <div id="article__post" class="output"> 
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        hello
+        </div>
+        
+        
+        
+        
+        
+        `
+
+
     }
 }
 

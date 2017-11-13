@@ -12,11 +12,11 @@ const connections = require("./connections/connectionsCreator")
 
 
 // Database
-const Database = {
+let Database = {
     "messages" : messages,
     "users" : users,
     "events" : events,
-    "articles" : articles,
+    "articles" : [],
     "tasks" : tasks,
     "innerDB": innerDB,
     "connections" : connections
