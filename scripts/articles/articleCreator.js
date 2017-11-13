@@ -5,7 +5,7 @@
 //imports
 const articleFactory = require("./articleFactory")
 // const Database = require("../Database")
-localStorage.setItem("Database", JSON.parse(Database))    
+localStorage.setItem("Database", JSON.parse(Database))
 
 //Create empty array if we need it
 Database.articles = Database.articles || []
@@ -27,7 +27,7 @@ const saveArticleEl = document.getElementById("articleForm__saveButt")
     // Sort the articles by their `id` property, descending
     Database.articles.sort((p, n) => n.id - p.id);
 
-    localStorage.setItem("Database", JSON.stringify(Database))        
+    localStorage.setItem("Database", JSON.stringify(Database))
     document.forms["article__form"].reset();
 
 })
