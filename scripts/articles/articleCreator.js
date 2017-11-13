@@ -11,11 +11,11 @@ const Database = JSON.parse(localStorage.getItem("Database"))
 Database.articles = Database.articles || [];
 
 //find 'article' div in the html
-const articleEl = document.getElementById("article")
+const articleEl = document.getElementById("articles")
 
 //when the article save button is clicked, take what is in the article text box and store it in Database.article, then push to local storage
 function articleStore() {
-    if (event.target.id === "articleForm_saveButt") {
+    if (event.target.id === "articleForm__saveButt") {
         const newArticle = articleFactory(
             document.querySelector("input[name='articleForm__url']").value,
             document.querySelector("input[name='articleForm__date']").value,
@@ -32,7 +32,6 @@ articleEl.addEventListener("click", articleStore)
 // Sort the articles by their `id` property, descending
 Database.articles.sort((p, n) => n.id - p.id);
 
-module.exports = Database
 
 
 
