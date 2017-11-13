@@ -7,7 +7,7 @@ const articlesHTML = {
     },
     "inner": {
         enumerable: true,
-        value: `<article class="article__form">
+        value: `<article class="form">
         <form name="article__form">
         <h2>Share fake news and annoy your friends!</h2>
         <label>Date</label>

@@ -27,17 +27,27 @@ function articleStore() {
 }
 
 //run the article button save event above that saves to the Database (articleStore) when anything is clicked in the article div element
-function articleListen() {
-    articleEl.addEventListener("click", articleStore)
-}
+articleEl.addEventListener("click", articleStore)
 
 // Sort the articles by their `id` property, descending
 Database.articles.sort((p, n) => n.id - p.id);
 
-//run the articleListen function
-articleListen();
-
 module.exports = Database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Deprecated code
