@@ -1,10 +1,12 @@
 //Author: Paul Ellis; Purpose: function that creates new users
-const Database = require("../Database");
 const idGenerator = require("../idGenerator");
 const userIdGen = idGenerator();
+const db = require("../Database")
+const Database = db.load();
+Database.users = Database.users || [];
 
 const usersFactory = (name, email) => {
-    return Object.create(null, {
+    let newUser =  Object.create(null, {
         "userId":
         {
             enumerable: true,
@@ -21,6 +23,11 @@ const usersFactory = (name, email) => {
             value: email
         }
     })
+    Database.users.push(newUser);
+    console.log(Database)
+    db.save(Database)
+    window.sessionStorage.setItem("currentUser", JSON.stringify(newUser.userId))
+
 }
 
 module.exports = usersFactory

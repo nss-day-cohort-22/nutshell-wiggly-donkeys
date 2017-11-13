@@ -9,9 +9,9 @@ let deleteArticle = function(event) {
 //if statement for getting proper id selected for retirement
     if (btnId.startsWith("article__")) {
 
-        //the Harrison Ford of code.  
+        //the Harrison Ford of code.
         let articleToRemove = document.getElementById("article__" + btnIdNum)
-        
+
         //Ryan Gosling or something
         articleEl.removeChild(articleToRemove)
     }
