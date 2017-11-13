@@ -21,6 +21,7 @@ const articleDOM = (article) => {
             <div>${Database.article.userID}</div>
             <div>${Database.article.url}</div>
             <div>${Database.article.note}</div>
+            <input type="button" id="articleForm__deleteButt" class="article__button" value="Delete this article">
             <div>${deleteButton}</div>
                 <br>
     </article>
