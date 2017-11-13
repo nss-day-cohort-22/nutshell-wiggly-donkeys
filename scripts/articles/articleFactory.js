@@ -17,7 +17,7 @@ const articles = (url, note, date) => {
             writable: true
         },
         "userId":{
-            value: Database.users[userId], 
+            value: Database.users[userId],
             enumerable: true,
             writable: true
         },
