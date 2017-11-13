@@ -1,6 +1,9 @@
 //Author: Paul Ellis; Purpose: create user database
 const makeUsers = require("./usersFactory");
 const Database = JSON.parse(localStorage.getItem("Database"))
+
+
+
 let usersDB = users => {
     if (Database === null) {
         const usersInit = [];

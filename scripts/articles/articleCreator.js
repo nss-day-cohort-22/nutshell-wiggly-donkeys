@@ -2,15 +2,8 @@
 // This file adds some starting structure for our Article Create Form.
 //┌(° ͜ʖ͡°)┘
 
-<<<<<<< HEAD
-//imports
-const articleFactory = require("./articleFactory")
-// const Database = require("../Database")
-localStorage.setItem("Database", JSON.parse(Database))
-=======
 //the creator requires the articleFactory
 const articleFactory = require("./articleFactory");
->>>>>>> master
 
 //pull the database from local storage
 const Database = JSON.parse(localStorage.getItem("Database"))
@@ -36,12 +29,6 @@ function articleStore() {
 //run the article button save event above that saves to the Database (articleStore) when anything is clicked in the article div element
 articleEl.addEventListener("click", articleStore)
 
-<<<<<<< HEAD
-    localStorage.setItem("Database", JSON.stringify(Database))
-    document.forms["article__form"].reset();
-
-})
-=======
 // Sort the articles by their `id` property, descending
 Database.articles.sort((p, n) => n.id - p.id);
 
@@ -94,4 +81,3 @@ Database.articles.sort((p, n) => n.id - p.id);
 
 // module.exports = Database.articles
 
->>>>>>> master

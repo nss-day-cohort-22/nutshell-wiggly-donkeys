@@ -16,13 +16,8 @@ const articles = (url, note, date) => {
             enumerable: true,
             writable: true
         },
-<<<<<<< HEAD
-        "userId":{
-            value: Database.users[userId],
-=======
         "userId": {
             value: JSON.parse(sessionStorage.getItem("currentUser")),
->>>>>>> master
             enumerable: true,
             writable: true
         },

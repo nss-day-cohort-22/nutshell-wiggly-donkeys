@@ -29,3 +29,5 @@ function messageStore () {
 
 //run the message button save event above that saves to the Database (messageStore) when anything is clicked in the message div element
 messagesEl.addEventListener("click", messageStore)
+
+module.exports = messagesEl
