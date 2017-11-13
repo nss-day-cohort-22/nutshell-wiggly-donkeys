@@ -5,6 +5,7 @@
 //imports
 const articleFactory = require("./articleFactory")
 const articleCreator = require("./articleCreator")
+const articleDelete = require("./articleDelete")
 const Database = require("../Database")
 
 // get article

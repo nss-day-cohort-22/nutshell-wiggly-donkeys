@@ -1,38 +1,46 @@
-//John Dulaney
+//John Dulaney and Max
 // This file adds some starting structure for our Article Create Form.
 //┌(° ͜ʖ͡°)┘
 
-//the creator requires the messagesFactory
-const messagesFactory = require("./messagesFactory");
+//the creator requires the articleFactory
+const articleFactory = require("./articleFactory");
 
 //pull the database from local storage
 const Database = JSON.parse(localStorage.getItem("Database"))
 
-Database.messages = Database.messages || [];
+Database.articles = Database.articles || [];
 
-//find 'message' div in the html
-const messagesEl = document.getElementById("messages")
+//find 'article' div in the html
+const articleEl = document.getElementById("article")
 
-//when the message save button is clicked, take what is in the message text box and store it in Database.messages, then push to local storage
-function messageStore () {
-    if (event.target.id === "messageForm_saveButt") {
-        const newMessage = messagesFactory(
-            document.getElementById("messageForm_text").value
+//when the article save button is clicked, take what is in the article text box and store it in Database.article, then push to local storage
+function articleStore() {
+    if (event.target.id === "articleForm_saveButt") {
+        const newArticle = articleFactory(
+            document.querySelector("input[name='articleForm__url']").value,
+            document.querySelector("input[name='articleForm__date']").value,
+            document.querySelector("textarea[name='articleForm__note']").value
         );
-        Database.messages.push(newMessage);
+        Database.articles.push(newArticle);
         localStorage.setItem("Database", JSON.stringify(Database));
     }
 }
 
-//run the message button save event above that saves to the Database (messageStore) when anything is clicked in the message div element
-function messageListen () {
-    messagesEl.addEventListener("click", messageStore)
+//run the article button save event above that saves to the Database (articleStore) when anything is clicked in the article div element
+function articleListen() {
+    articleEl.addEventListener("click", articleStore)
 }
 
-//run the messageListen function
-messageListen();
+// Sort the articles by their `id` property, descending
+Database.articles.sort((p, n) => n.id - p.id);
+
+//run the articleListen function
+articleListen();
 
 module.exports = Database
+
+
+//Deprecated code
 
 // //imports
 // const articleFactory = require("./articleFactory")
@@ -56,8 +64,6 @@ module.exports = Database
 //     // Add new article to array
 //     Database.articles.push(newArticle);
 
-//     // Sort the articles by their `id` property, descending
-//     Database.articles.sort((p, n) => n.id - p.id);
 
 //     localStorage.setItem("Database", JSON.stringify(Database))
 //     document.forms["article__form"].reset();
@@ -65,3 +71,4 @@ module.exports = Database
 // })
 
 // module.exports = Database.articles
+
