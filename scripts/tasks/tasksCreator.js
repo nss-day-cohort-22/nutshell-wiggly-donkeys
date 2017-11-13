@@ -27,4 +27,4 @@ const saveTaskEl = document.getElementById("taskForm__saveButt").
         // Sort the task by their `id` property
         Database.tasks.sort((p, n) => p.taskId + n.taskId);
     });
-module.exports = null
+module.exports = Database.tasks

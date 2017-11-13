@@ -18,6 +18,7 @@ const taskIdGen = idGenerator()
         "taskName": {
             value: taskName,
             enumerable: true,
+            writable: true,
         },
         "completionDate": {
             value: completionDate,
@@ -26,6 +27,7 @@ const taskIdGen = idGenerator()
         "completed": {
             value: false,
             enumerable: true,
+            writable: true,
         },
     });
 };
