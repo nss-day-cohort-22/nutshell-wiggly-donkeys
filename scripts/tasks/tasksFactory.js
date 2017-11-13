@@ -9,25 +9,25 @@ const taskIdGen = idGenerator()
     return Object.create(null, {
         "taskId": {
             value: taskIdGen.next().value,
-            enumerable: true,
+            enumerable: true
         },
         "userId": {
-            value: Database.users[userId],
-            enumerable: true,
+            value: JSON.parse(sessionStorage.getItem("currentUser")),
+            enumerable: true
         },
         "taskName": {
             value: taskName,
             enumerable: true,
-            writable: true,
+            writable: true
         },
         "completionDate": {
             value: completionDate,
-            enumerable: true,
+            enumerable: true
         },
         "completed": {
             value: false,
             enumerable: true,
-            writable: true,
+            writable: true
         },
     });
 };

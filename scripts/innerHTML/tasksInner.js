@@ -10,7 +10,7 @@ const tasksHTML = {
         value: `   <div class="button">
         <button id="taskForm__newButt">New Task</button>
     </div>
-    <form id="taskForm" class="taskForm hidden">
+    <form id="taskForm" name="taskForm" class="taskForm hidden">
         <div>
             <label for="taskForm__taskName">Name:</label>
             <input type="text" id="taskForm__taskName" name="taskForm__taskName">
@@ -19,10 +19,14 @@ const tasksHTML = {
             <label for="taskForm__completionDate">Expected Completion Date (mm/dd/yy)</label>
             <input type="text" id="taskForm__completionDate" name="taskForm__completionDate">
         </div>
-        <div class="button">
+        </form>
+        <div id="saveBtn" class="button hidden">
             <button id="taskForm__saveButt">Save Task</button>
         </div>
-    </form>`
+        <section id="tasks__Post" class="taskOutput">
+        <h1>TASK LIST</h1>
+        </section>
+        `
     }
 }
 
