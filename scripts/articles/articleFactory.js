@@ -1,7 +1,6 @@
 // John Dulaney
 // This fine piece of butchered code creates a factory for storing articles in our nutshellDB
 //┌(° ͜ʖ͡°)┘
-
 //imports
 const idGenerator = require("../idGenerator")
 const Database = require("../Database");

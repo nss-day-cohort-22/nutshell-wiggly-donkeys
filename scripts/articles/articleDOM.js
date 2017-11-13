@@ -15,14 +15,15 @@ const articleDOM = (article) => {
     const deleteButton = deleteArticle()
     article.forEach(artPush => {
         articleEl.innerHTML += `
-        <article id=${Database.article.id}>
+                <br>
+    <article id=${Database.article.id}>
         <div>Article you shared on ${Database.article.date}</div>
             <div>${Database.article.userID}</div>
             <div>${Database.article.url}</div>
             <div>${Database.article.note}</div>
             <div>${deleteButton}</div>
-                        <br>
-        </article>
+                <br>
+    </article>
         `
     })
 }
