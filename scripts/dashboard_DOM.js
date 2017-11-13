@@ -10,4 +10,4 @@ const populateDOM = DOM => {
     })
 }
 
-// module.exports = populateDOM
+module.exports = populateDOM

@@ -1,30 +1,45 @@
 //Author:Chase Steely
 //Purpose: To create a task and send it to database.
+
+//the creator requires the taskFactory
 const taskFactory = require("./taskFactory")
-const taskForm = require("./taskForm")
-const Database = require("../Database")
 
-// Create `tasks` key if it doesn't exist
+//pull the database from local storage
+const Database = JSON.parse(localStorage.getItem("Database"))
+
 Database.tasks = Database.tasks || [];
-
-// Sort the articles by their `id` property, descending
 // Sort the task by their `id` property, descending
 Database.tasks.sort((p, n) => p.taskId + n.taskId);
 
-// Add click event listener to the save button
-const saveTaskEl = document.getElementById("taskForm__saveButt").
-    addEventListener("click", event => {
-        document.getElementById("taskForm").classList.add("hidden")
+//find 'tasks' div in the html
+const tasksEl = document.getElementById("tasks")
+const form = document.getElementById("taskForm")
+
+//when the task save button is clicked, take what is in the message text box and store it in Database.messages, then push to local storage
+function taskStore () {
+    if (event.target.id === "taskForm__newButt"){
+        form.classList.remove("hidden")
+    }
+    if (event.target.id === "taskForm__saveButt") {
+        form.classList.add("hidden")
         // Create a new task object
         const newTask = taskFactory(
             document.querySelector("input[name='taskForm__taskName']").value,
             document.querySelector("input[name='taskForm__completionDate']").value
         );
-
-        // Add new task to array
         Database.tasks.push(newTask);
-
         // Sort the task by their `id` property
         Database.tasks.sort((p, n) => p.taskId + n.taskId);
-    });
-module.exports = Database.tasks
+        localStorage.setItem("Database", JSON.stringify(Database));
+    }
+}
+
+//run the message button save event above that saves to the Database (taskStore) when anything is clicked in the message div element
+function taskListen () {
+    tasksEl.addEventListener("click", taskStore)
+}
+
+//run the taskListen function
+taskListen();
+
+module.exports = Database
