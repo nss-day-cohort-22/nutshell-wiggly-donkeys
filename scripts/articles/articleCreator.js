@@ -32,3 +32,4 @@ const saveArticleEl = document.getElementById("articleForm__saveButt")
 
 })
 
+module.exports = Database.articles

@@ -1,4 +1,6 @@
-
+// John Dulaney
+// This is a work in progress innerhtml file. DEPRECATED
+//┌(° ͜ʖ͡°)┘
 
 const taskEl = document.getElementById("tasks")
 
