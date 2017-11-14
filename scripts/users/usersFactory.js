@@ -3,15 +3,6 @@ const idGenerator = require("../idGenerator");//get the idgenerator function
 const db = require("../Database");//get the database object with methods
 let userIdGen = null;//set instance of idGenerator
 
-<<<<<<< HEAD
-=======
-if (Database.users.length === 0) {userIdGen = idGenerator()}//if there are now users yet, use idGenerator normally
-else {//if users array exists in storage....
-    Database.users.sort((p, n) => n.userId - p.userId);//..sort users array to have highest id number at index 0
-    console.log(Database.users[0])
-    userIdGen = idGenerator(Database.users[0].userId);//set instance of id generator to be passed highest id number for it's starting number
-}
->>>>>>> master
 
 const usersFactory = (name, email) => {
     const Database = db.load();//use load method of database object to get local storage
