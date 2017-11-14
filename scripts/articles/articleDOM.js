@@ -32,4 +32,6 @@ db.save(Database)
 
     // <div>${artPush.userID}</div>
     
+    // <dibv>${deleteButton}</dibv>
+
 module.exports = articleDOM
