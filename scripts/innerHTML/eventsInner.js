@@ -27,7 +27,14 @@ const eventsHTML = {
                 <input type="button" id="eventForm__saveButt" class="event__button" value="Post event">
             </div>
         </form>
-    </section>`
+    </section>
+    <div id="event__post" class="output"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    `
     }
 }
 
