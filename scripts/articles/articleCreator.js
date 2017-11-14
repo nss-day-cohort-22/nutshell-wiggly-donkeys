@@ -3,13 +3,12 @@
 //┌(° ͜ʖ͡°)┘
 
 //the creator requires the articleFactory
-const Database = require("../Database")
+const db = require("../Database")
+const Database = db.load()
 const articleFactory = require("./articleFactory");
 const articleDOM = require("./articleDOM")
 
-//pull the database from local storage
-// const Database = JSON.parse(localStorage.getItem("Database"))
-
+//Create an articles key or make an empty array
 Database.articles = Database.articles || [];
 
 // Sort the articles by their `id` property, descending
@@ -18,26 +17,28 @@ Database.articles.sort((p, n) => n.id - p.id);
 //find 'article' div in the html
 const articleEl = document.getElementById("articles")
 
-//when the article save button is clicked, take what is in the article text box and store it in Database.article, then push to local storage
+//when the article save button is clicked, take what is in the article text box and store it in db.article, then push to local storage
 function articleStore() {
     if (event.target.id === "articleForm__saveButt") {
         const newArticle = articleFactory(
             document.querySelector("input[name='articleForm__url']").value,
-            document.querySelector("input[name='articleForm__date']").value,
-            document.querySelector("textarea[name='articleForm__note']").value
+            document.querySelector("textarea[name='articleForm__note']").value,
+            document.querySelector("input[name='articleForm__date']").value
         );
+
+        //push new article into database
         Database.articles.push(newArticle);
 
-        // Sort the articles by their `id` property, descending
-        Database.articles.sort((p, n) => n.id - p.id);
-        localStorage.setItem("Database", JSON.stringify(Database));
-        // let Database = JSON.parse(localStorage.getItem("Database"))
+        //save to db
+        db.save(Database)
 
+        //run dom function
         articleDOM()
+
+        //reset form
         document.forms["article__form"].reset();
     }
 }
-
 //run the article button save event above that saves to the Database (articleStore) when anything is clicked in the article div element
 articleEl.addEventListener("click", articleStore)
 

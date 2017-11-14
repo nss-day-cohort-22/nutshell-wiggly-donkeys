@@ -1,9 +1,12 @@
 // John Dulaney
 // This fine piece of butchered code creates a factory for storing articles in our nutshellDB
 //┌(° ͜ʖ͡°)┘
+
 //imports
 const idGenerator = require("../idGenerator")
-const Database = require("../Database");
+const db = require("../Database");
+const Database = db.load()
+
 
 //calling the idgenerator function
 const articleIdGenerator = idGenerator();
@@ -32,7 +35,7 @@ const articlesFactory = (url, note, date) => {
             writable: true
         },
         "date":{
-            value: Date.now(),
+            value: date,
             enumerable: true,
             writable: true
             }

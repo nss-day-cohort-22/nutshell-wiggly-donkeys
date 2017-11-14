@@ -3,13 +3,13 @@
 //┌(° ͜ʖ͡°)┘
 
 //imports
-const Database = require("../Database")
+const db = require("../Database")
 
 
 //function for scope
 const eventsDOM = () => {
     
-    const Database = JSON.parse(localStorage.getItem("Database"))
+    const Database = db.load()
     // get events
     const eventsEl = document.getElementById("event__post")
     eventsEl.innerHTML = ""
