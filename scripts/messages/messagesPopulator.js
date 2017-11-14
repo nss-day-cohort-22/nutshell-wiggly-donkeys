@@ -1,23 +1,21 @@
-const messagesCreator = require("./messagesCreator")
-const messagesEl = require("./messagesCreator")
-// const Database = require("../Database")
+const db = require("../Database")
 
 //pull the database from local storage
 
-let newMessages = "";
 
+const writeMessages = () => {
+    const Database = db.load()
+    const messageOut = document.getElementById("messageOutput");
+    messageOut.innerHTML = "";
+    Database.messages = Database.messages || []
+    Database.messages.forEach(messages => {
+        messageOut.innerHTML += `
+        <div>
+            <p>User: ${messages.userId}</p>
+            <p>${messages.message}</p>
+        <div>`
+    })
+    db.save(Database);
+}
 
-messagesEl.addEventListener("click", event => {
-    if (event.target.id === "messageForm_saveButt") {
-        const Database = JSON.parse(localStorage.getItem("Database"))
-        Database.messages.forEach(messages => {
-            newMessages = `
-            <div>
-                <p>User: ${messages.userId}</p>
-                <p>${messages.message}</p>
-            <div>`
-        })
-        document.getElementById("messageOutput").innerHTML += newMessages;
-        }
-})
-
+module.exports = writeMessages

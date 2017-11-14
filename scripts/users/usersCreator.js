@@ -1,18 +1,18 @@
 //Author: Paul Ellis; Purpose: create user database
-const makeUsers = require("./usersFactory");
-const Database = JSON.parse(localStorage.getItem("Database"))
+// const usersFactory = require("./usersFactory");
+// const db = require("../Database")
+
+// const Database = db.load()
+
+// Database.users = Database.users || []
+// const users = [];
+// usersDB.push(usersFactory("Paul", "paul@nuts.com"));
+// usersDB.push(usersFactory("John", "john@nuts.com"));
+// usersDB.push(usersFactory("Max", "max@nuts.com"));
+// usersDB.push(usersFactory("Chase", "chase@nuts.com"));
+
+// // const updateData = () => {usersDB = Database.users}
+// // window.addEventListener("storage", updateData)
 
 
-
-let usersDB = users => {
-    if (Database === null) {
-        const usersInit = [];
-        usersInit.push(makeUsers("Paul", "paul@nuts.com"));
-        usersInit.push(makeUsers("John", "john@nuts.com"));
-        usersInit.push(makeUsers("Max", "max@nuts.com"));
-        usersInit.push(makeUsers("Chase", "chase@nuts.com"));
-        return usersInit
-        } else {return Database.users}
-}
-
-module.exports = usersDB();
+// module.exports = usersDB;
