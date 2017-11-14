@@ -7,7 +7,8 @@ const eventsHTML = {
     },
     "inner": {
         enumerable: true,
-        value: `<section class="form">
+        value: `
+    <section class="form">
         <form name="event__form">
         <h2>Add Upcoming Events</h2>
         <label>Name</label>
@@ -26,7 +27,14 @@ const eventsHTML = {
                 <input type="button" id="eventForm__saveButt" class="event__button" value="Post event">
             </div>
         </form>
-    </section>`
+    </section>
+    <div id="event__post" class="output"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    `
     }
 }
 
