@@ -9,14 +9,6 @@
 // //if statement for getting proper id selected for retirement
 //     if (btnId.startsWith("article__")) {
 
-<<<<<<< HEAD
-        //the Harrison Ford of code.
-        let articleToRemove = document.getElementById("article__" + btnIdNum)
-        //Ryan Gosling or something
-        articleEl.removeChild(articleToRemove)
-    }
-}
-=======
 //         //the Harrison Ford of code.
 //         let articleToRemove = document.getElementById("article__" + btnIdNum)
 
@@ -24,7 +16,6 @@
 //         articleEl.removeChild(articleToRemove)
 //     }
 // }
->>>>>>> master
 
 // articleEl.addEventListener("click", deleteArticle)
 

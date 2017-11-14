@@ -17,7 +17,7 @@ const writeTask = () => {
     </article>
     `
     })
-    db.save(Database);
+    // db.save(Database);
 }
 
 module.exports = writeTask
