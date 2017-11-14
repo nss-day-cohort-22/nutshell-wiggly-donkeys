@@ -31,7 +31,7 @@ const usersFactory = (name, email) => {
         }
     })
     Database.users.push(newUser);//push new user into users array in Database
-    db.save(Database)//call save method of database object that pushes new db to local storage
+    db.save(Database, "users")//call save method of database object that pushes new db to local storage
     sessionStorage.setItem("currentUser", JSON.stringify(newUser.userId))//set session storage to new user's id
 
 }

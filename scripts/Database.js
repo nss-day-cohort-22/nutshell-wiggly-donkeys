@@ -30,7 +30,10 @@ const Database = Object.create(null, {
         value: () => JSON.parse(localStorage.getItem("Database")) || {}
     },
     save: {
-        value: db => localStorage.setItem("Database", JSON.stringify(db))
+        value: (db, flag) => {
+            localStorage.setItem("Database", JSON.stringify(db));
+            localStorage.setItem("changedKey", JSON.stringify(flag))
+        }
     }
 })
 
