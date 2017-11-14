@@ -11,8 +11,7 @@ const messagesFactory = (message) => {
             enumerable: true
         },
         "userId": {
-            //insert function to pull from session storage
-            value: Database.users.userId,
+            value: JSON.parse(sessionStorage.getItem("currentUser")),
             enumerable: true
         },
         "message": {
