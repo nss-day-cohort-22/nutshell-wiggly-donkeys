@@ -1,5 +1,6 @@
 const messagesCreator = require("./messagesCreator")
 const messagesEl = require("./messagesCreator")
+// const Database = require("../Database")
 
 //pull the database from local storage
 
@@ -19,3 +20,4 @@ messagesEl.addEventListener("click", event => {
         document.getElementById("messageOutput").innerHTML += newMessages;
         }
 })
+
