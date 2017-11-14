@@ -8,8 +8,4 @@
 // usersDB.push(usersFactory("Max", "max@nuts.com"));
 // usersDB.push(usersFactory("Chase", "chase@nuts.com"));
 
-// // const updateData = () => {usersDB = Database.users}
-// // window.addEventListener("storage", updateData)
-
-
 // module.exports = usersDB;

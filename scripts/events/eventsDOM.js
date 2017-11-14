@@ -8,7 +8,7 @@ const db = require("../Database")
 
 //function for scope
 const eventsDOM = () => {
-    
+
     const Database = db.load()
     // get events
     const eventsEl = document.getElementById("event__post")
