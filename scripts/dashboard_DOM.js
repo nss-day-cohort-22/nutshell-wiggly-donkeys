@@ -2,6 +2,7 @@
 
 const db = require("./Database")
 const innerDB = require("./innerHTML/innerDB")
+const writeMessages = require("./messages/messagesPopulator")
 
 
 const populateDOM = DOM => {
@@ -12,6 +13,7 @@ const populateDOM = DOM => {
     })
     articleDOM()
     taskDom()
+    writeMessages()
 }
 
 module.exports = populateDOM
