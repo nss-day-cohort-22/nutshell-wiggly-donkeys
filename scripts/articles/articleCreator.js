@@ -7,7 +7,6 @@ const db = require("../Database")
 const articleFactory = require("./articleFactory");
 const articleDOM = require("./articleDOM")
 
-//Create an articles key or make an empty array
 
 
 //find 'article' div in the html
@@ -16,10 +15,12 @@ const articleEl = document.getElementById("articles")
 //when the article save button is clicked, take what is in the article text box and store it in db.article, then push to local storage
 function articleStore() {
     const Database = db.load()
+    
+    //Create an articles key or make an empty array
     Database.articles = Database.articles || [];
     
     // Sort the articles by their `id` property, descending
-    Database.articles.sort((p, n) => n.id - p.id);
+    Database.articles.sort((n, p) => p.id - n.id);
 
     if (event.target.id === "articleForm__saveButt") {
         const newArticle = articleFactory(
@@ -32,7 +33,7 @@ function articleStore() {
         Database.articles.push(newArticle);
 
         //save to db
-        db.save(Database)
+        db.save(Database, "articles")
 
         //run dom function
         articleDOM()

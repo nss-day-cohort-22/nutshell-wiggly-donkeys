@@ -4,14 +4,15 @@
 
 //imports
 const db = require("../Database")
-const deleteArt = require("./articleDelete")
+const deleteArticle  = require("./articleDelete")
+// const articleEl = document.getElementById("article__post")
+// const deleteButton = deleteArticle()
 
-//function for scope
+//function
 const articleDOM = () => {
     const Database = db.load()
     Database.articles = Database.articles || [];
     const articleEl = document.getElementById("article__post")
-    // const deleteButton = deleteArticle()
         articleEl.innerHTML = ""
              Database.articles.forEach(artPush => {
                 articleEl.innerHTML += `
@@ -26,12 +27,7 @@ const articleDOM = () => {
                 </article>
                         `
                     })
-
-db.save(Database)
+    articleEl.addEventListener("click", deleteArticle)
 }
-
-    // <div>${artPush.userID}</div>
-    
-    // <dibv>${deleteButton}</dibv>
 
 module.exports = articleDOM
