@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<nav class="jumbotron">NutShell</nav>
+  <nav class="jumbotron">NutShell</nav>
 
   <header></header>
 
@@ -24,21 +24,24 @@
       <h1 class="display-1">Welcome</h1>
       <h2 class="text-muted">See it all in a nutshell</h2>
       <div class="d-flex flex-column">
-      <input id="regForm_username" placeholder="username"></input>
-      <input id="regForm_email" placeholder="email"></input>
-      <div class="d-flex flex-row justify-content-between mt-2">
-        <button id="regForm_saveButt" class="regButts">Register</button>
-        <button id="regForm_login" class="regButts">Login</button>
+        <input id="regForm_username" placeholder="username"></input>
+        <input id="regForm_email" placeholder="email"></input>
+        <div class="d-flex flex-row justify-content-between mt-2">
+          <button id="regForm_saveButt" class="regButts">Register</button>
+          <button id="regForm_login" class="regButts">Login</button>
+        </div>
       </div>
     </div>
+
+    <div id="top">
+      <div id="friendsList"></div>
+      <div id="messages"></div>
+      <div id="tasks"></div>
     </div>
-
-
-    <div id = "messages"></div>
-    <div id = "tasks"></div>
-    <div id = "events"></div>
-    <div id = "articles"></div>
-    <div id = "friendsList"></div>
+    <div id="bottom">
+      <div id="events"></div>
+      <div id="articles"></div>
+    </div>
 
 
   </main>

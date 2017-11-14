@@ -23,3 +23,8 @@
     text-align: center;
     padding: 2em;
 }
+
+#friendsList input, button {
+    padding: 1em;
+    margin: 2em;
+}

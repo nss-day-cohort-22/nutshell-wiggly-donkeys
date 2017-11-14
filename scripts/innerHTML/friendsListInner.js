@@ -8,7 +8,7 @@ const friendsHTML = {
     "inner": {
         enumerable: true,
         value: `
-        <input id="addFriend_input" placeholder="Don't be lonely. Type username of the friend you want.">
+        <input id="addFriend_input" placeholder="Don't be lonely. Type a friend's username." size="50">
         <button id="addFriend_button">Add Friend</button>
         `
     }
