@@ -1,7 +1,7 @@
 // Authors : Chase, John, Max, and Paul
 // Purpose : Nutshell's Database
 
-//imports - Add as we go boys
+//imports - Add as we go boys DEPRECATED
 // const messages = require("./messages/messagesFactory");
 // const users = require("./users/usersCreator");
 // const events = require("./events/eventsFactory");
