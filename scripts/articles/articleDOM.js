@@ -26,7 +26,6 @@ const articleDOM = () => {
                         `
                     })
 
-db.save(Database)
 }
 
     // <div>${artPush.userID}</div>

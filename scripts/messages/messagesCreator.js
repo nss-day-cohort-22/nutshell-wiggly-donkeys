@@ -3,7 +3,7 @@ const db = require("../Database")
 //the creator requires the messagesFactory
 const messagesFactory = require("./messagesFactory");
 //require the writeMessages function from the messagesPopulator
-const writeMessages = require("./messagesPopulator")
+const writeMessages = require("./messagesDom")
 
 //find 'message' div in the html
 const messagesEl = document.getElementById("messages")
@@ -12,6 +12,7 @@ const messagesEl = document.getElementById("messages")
 function messageStore () {
     //pull the database from local storage
     const Database = db.load()
+    Database.messages = Database.messages || [];//if Database.messages doesn't exist, set to empty array
     //  Initially Sort the task by their `id` property //
     Database.messages.sort((p, n) => p.messageId - n.messageId)
     if (event.target.id === "messageForm_saveButt") {
@@ -21,7 +22,7 @@ function messageStore () {
         Database.messages.push(newMessage);
         // ReSort the task by their `id` property //
         Database.messages.sort((p, n) => p.messageId - n.messageId);
-        db.save(Database);
+        db.save(Database, "messages");
         document.forms["messageForm"].reset();
         writeMessages();
     }
