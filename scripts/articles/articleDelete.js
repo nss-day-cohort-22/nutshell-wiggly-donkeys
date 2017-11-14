@@ -3,8 +3,6 @@
 // //┌(° ͜ʖ͡°)┘
 
 const db = require("../Database")
-
-
 let deleteArticle = function(event) {
     const articleEl = document.getElementById("article__post")
     const btnId = event.target.id
@@ -12,6 +10,7 @@ let deleteArticle = function(event) {
     
     //if statement for getting proper id selected for retirement
     if (btnId.startsWith("button__")) {
+        const Database = db.load()
         
         //the Harrison Ford of code.
         let articleToRemove = document.getElementById("article__" + btnIdNum)
@@ -19,27 +18,14 @@ let deleteArticle = function(event) {
         
         //Ryan Gosling or something
         articleEl.removeChild(articleToRemove)
-        return false
-        // filterArray.this
+        //parse id number
+        const parseId = parseInt(btnIdNum)
+        //filter out unworthy ids
+        const filterArray = Database.articles.filter(article => article.id !== parseId)
+        // set our db to the new filtered array
+        Database.articles = filterArray
+        //resave it to our db
+        db.save(Database, "articles")
     }
-    // Vague attempts to clear from local storage
-    let deleteStorage = function(){
-        // load database 
-        const Database = db.load()
-        // define a filter that goes into DB and filters false articles
-        const filterArray = Database.articles.filter()
-        //if statement that checks if an article is set to false
-            if (article === false) {
-                //if it is, run the .filter function
-                filterArray
-            }
-    } 
-    //call the filter function to be included with the delete function
-    deleteStorage()
 }
-
-
 module.exports = deleteArticle
-
-
-// localstorage.removeItem()

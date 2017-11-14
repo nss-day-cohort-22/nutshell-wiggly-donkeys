@@ -20,7 +20,7 @@ function articleStore() {
     Database.articles = Database.articles || [];
     
     // Sort the articles by their `id` property, descending
-    Database.articles.sort((n, p) => p.id - n.id);
+    Database.articles.sort((p, n) => n.id - p.id);
 
     if (event.target.id === "articleForm__saveButt") {
         const newArticle = articleFactory(
