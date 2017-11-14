@@ -1,8 +1,8 @@
 const db = require("../Database");
 const dashboardDOM = require("../dashboard_DOM")
-const Database = db.load();
 
 const userLogin = () => {
+    const Database = db.load();
     document.getElementById("regForm_login").addEventListener("click", login => {
         const regUsername = document.getElementById("regForm_username").value;//get value of username field
         const regEmail = document.getElementById("regForm_email").value;//get value of email field

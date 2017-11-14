@@ -1,10 +1,13 @@
-//Author: Paul Ellis; Purpose: Listen for change in browser storage
+// Author: Paul Ellis; Purpose: Listen for change in browser storage
+const db = require("./Database")
 
-const changedKey = JSON.parse(localStorage.getItem("changedKey"));
 const update = () => {
-    console.log(changedKey)
+    const Database = db.load();
+    const changedKey = JSON.parse(localStorage.getItem("changedKey"));
+    Database[changedKey].forEach(user => console.log(user))
 }
 
-const storageListener = () => {
-    window.addEventListener("storage", filler)
-}
+const storageListener = () => {window.addEventListener("storage", update)};
+
+
+module.exports = storageListener();
