@@ -1,10 +1,10 @@
 // //Author: Paul Ellis; Purpose: function that populates the dashboard
 
 const db = require("./Database")
-const taskDom = require("./tasks/taskDom")
-const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))//access the user
-const innerDB = require("./innerHTML/innerDB")
 const Database = db.load();
+const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))//access the user
+const taskDom = require("./tasks/taskDom")
+const innerDB = require("./innerHTML/innerDB")
 
 const populateDOM = DOM => {
     innerDB.forEach(el => {

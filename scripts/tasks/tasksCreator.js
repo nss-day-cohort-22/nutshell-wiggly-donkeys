@@ -2,12 +2,12 @@
 //Purpose: To create a task and send it to database.
 
 //the creator requires the taskFactory
-const Database = require("../Database")
+const db = require("../Database")
+const Database = db.load()
 const tasksFactory = require("./tasksFactory")
 const taskDom = require("./taskDom")
 //pull the database from local storage
 // let Database = JSON.parse(localStorage.getItem("Database"))
-
 Database.tasks = Database.tasks || [];
 // Sort the task by their `id` property, descending
 Database.tasks.sort((p, n) => p.taskId + n.taskId);
@@ -30,7 +30,7 @@ function taskStore() {
         Database.tasks.push(newTask);
         // Sort the task by their `id` property
         Database.tasks.sort((p, n) => p.taskId + n.taskId);
-        localStorage.setItem("Database", JSON.stringify(Database));
+        db.save(Database);
         document.getElementById("taskForm").classList.add("hidden")
         document.getElementById("saveBtn").classList.add("hidden")
         document.forms["taskForm"].reset();
