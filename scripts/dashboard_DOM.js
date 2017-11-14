@@ -10,6 +10,7 @@ const populateDOM = DOM => {
     const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))//access the user
     innerDB.forEach(el => {
         document.getElementById(el.id.value).innerHTML = el.inner.value;
+        document.getElementById(el.id.value).classList.add("dashboardDiv", "d-flex");
     })
     articleDOM()
     taskDom()

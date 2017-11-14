@@ -2,7 +2,7 @@
 
 const idGenerator = require("../idGenerator");//get the idgenerator function
 const db = require("../Database");//get the database object with methods
-let connectionIdGen = null;//set instance of idGenerator
+let connectionIdGen = idGenerator();//set instance of idGenerator
 
 const connectionFactory = (user, friend) => {
     const Database = db.load();//use load method of database object to get local storage
@@ -29,6 +29,9 @@ const connectionFactory = (user, friend) => {
             value: friend
         }
     })
+    Database.connections.push(newConnection);
+    db.save(Database, "connections");
+    console.log(Database.connections)
 }
 
 module.exports = connectionFactory

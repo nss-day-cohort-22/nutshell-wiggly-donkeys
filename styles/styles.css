@@ -17,3 +17,9 @@
     margin: 35px;
 
 }
+
+.dashboardDiv {
+    border: 1px solid tomato;
+    text-align: center;
+    padding: 2em;
+}
