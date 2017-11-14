@@ -17,3 +17,8 @@
     margin: 35px;
 
 }
+
+.article__card {
+    border: 1px solid tomato;
+
+}
