@@ -3,20 +3,20 @@
 
 //the creator requires the taskFactory
 const db = require("../Database")
-const Database = db.load()
 const tasksFactory = require("./tasksFactory")
 const taskDom = require("./taskDom")
 //pull the database from local storage
 // let Database = JSON.parse(localStorage.getItem("Database"))
-Database.tasks = Database.tasks || [];
-// Sort the task by their `id` property, descending
-Database.tasks.sort((p, n) => p.taskId + n.taskId);
 
 //find 'tasks' div in the html
 const tasksEl = document.getElementById("tasks")
 
 //when the task save button is clicked, take what is in the message text box and store it in Database.messages, then push to local storage
 function taskStore() {
+    // Sort the task by their `id` property, descending
+    const Database = db.load()
+    Database.tasks = Database.tasks || [];
+    Database.tasks.sort((p, n) => p.taskId + n.taskId);
     if (event.target.id === "taskForm__newButt") {
         document.getElementById("taskForm").classList.remove("hidden")
         document.getElementById("saveBtn").classList.remove("hidden")

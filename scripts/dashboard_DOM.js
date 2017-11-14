@@ -10,8 +10,6 @@ const innerDB = require("./innerHTML/innerDB")
 const populateDOM = DOM => {
     innerDB.forEach(el => {
         document.getElementById(el.id.value).innerHTML = el.inner.value;
-        
-
     })
     articleDOM()
     taskDom()

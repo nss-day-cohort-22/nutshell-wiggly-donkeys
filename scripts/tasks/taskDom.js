@@ -16,8 +16,8 @@ const writeTask = () => {
             <label for="markComplete">Check if Complete.</label>
     </article>
     `
-    })
-    db.save(Database);
+})
+db.save(Database);
 }
 
 module.exports = writeTask
