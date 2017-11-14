@@ -3,7 +3,7 @@
 
 //imports
 const idGenerator = require("../idGenerator")
-const Database = require("../Database");
+const db = require("../Database");
 
 
 //calling the idgenerator function
