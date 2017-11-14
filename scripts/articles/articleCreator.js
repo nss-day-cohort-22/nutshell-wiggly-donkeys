@@ -3,12 +3,17 @@
 //┌(° ͜ʖ͡°)┘
 
 //the creator requires the articleFactory
+const Database = require("../Database")
 const articleFactory = require("./articleFactory");
+const articleDOM = require("./articleDOM")
 
 //pull the database from local storage
-const Database = JSON.parse(localStorage.getItem("Database"))
+// const Database = JSON.parse(localStorage.getItem("Database"))
 
 Database.articles = Database.articles || [];
+
+// Sort the articles by their `id` property, descending
+Database.articles.sort((p, n) => n.id - p.id);
 
 //find 'article' div in the html
 const articleEl = document.getElementById("articles")
@@ -22,9 +27,13 @@ function articleStore() {
             document.querySelector("textarea[name='articleForm__note']").value
         );
         Database.articles.push(newArticle);
+
+        // Sort the articles by their `id` property, descending
+        Database.articles.sort((p, n) => n.id - p.id);
         localStorage.setItem("Database", JSON.stringify(Database));
         // let Database = JSON.parse(localStorage.getItem("Database"))
 
+        articleDOM()
         document.forms["article__form"].reset();
     }
 }
@@ -32,8 +41,6 @@ function articleStore() {
 //run the article button save event above that saves to the Database (articleStore) when anything is clicked in the article div element
 articleEl.addEventListener("click", articleStore)
 
-// Sort the articles by their `id` property, descending
-Database.articles.sort((p, n) => n.id - p.id);
 
 
 

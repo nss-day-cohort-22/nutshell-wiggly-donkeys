@@ -4,15 +4,18 @@
 
 //imports
 const Database = require("../Database")
-const articleFactory = require("./articleFactory")
-const articleCreator = require("./articleCreator")
+// const articleFactory = require("./articleFactory")
+// const articleCreator = require("./articleCreator")
 // const articleDelete = require("./articleDelete")
 
 
 //function for scope
 const articleDOM = () => {
+    
+    const Database = JSON.parse(localStorage.getItem("Database"))
     // get article
     const articleEl = document.getElementById("article__post")
+    articleEl.innerHTML = ""
     // const deleteButton = deleteArticle()
     Database.articles.forEach(artPush => {
         articleEl.innerHTML += `
@@ -30,6 +33,7 @@ const articleDOM = () => {
     })
 }
     
+
     // <div>${artPush.userID}</div>
     // <dibv>${deleteButton}</dibv>
 module.exports = articleDOM

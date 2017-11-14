@@ -5,7 +5,7 @@
 const messages = require("./messages/messagesFactory");
 const users = require("./users/usersCreator");
 const events = require("./events/eventsFactory");
-const articles = require("./articles/articleFactory");
+// const articles = require("./articles/articleFactory");
 const tasks = require("./tasks/tasksFactory");
 const innerDB = require("./innerHTML/innerDB")
 const connections = require("./connections/connectionsCreator")

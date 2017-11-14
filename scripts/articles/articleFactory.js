@@ -9,7 +9,7 @@ const Database = require("../Database");
 const articleIdGenerator = idGenerator();
 
 //factory for Articles
-const articles = (url, note, date) => {
+const articlesFactory = (url, note, date) => {
     return Object.create(null, {
         "id":{
             value: articleIdGenerator.next().value,
@@ -41,4 +41,4 @@ const articles = (url, note, date) => {
 }
 
 //exports
-module.exports = articles
+module.exports = articlesFactory

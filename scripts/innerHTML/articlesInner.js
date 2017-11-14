@@ -23,10 +23,10 @@ const articlesHTML = {
             <div class="form-group col-4">
                 <textarea name="articleForm__note" id="note" name="Notes" cols="30" rows="10" placeholder="Add a note about the article"></textarea>
             </div>
+            </form>
             <div class="form-group col-3">
                 <input type="button" id="articleForm__saveButt" class="article__button" value="Post Article">
             </div>
-        </form>
         </article>
         <div id="article__post" class="output"> 
         <br>
