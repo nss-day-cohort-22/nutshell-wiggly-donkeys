@@ -2,6 +2,8 @@
 
 const db = require("./Database")
 const innerDB = require("./innerHTML/innerDB")
+const taskDom = require("./tasks/taskDom")
+const articleDOM = require("./articles/articleDOM")
 
 
 const populateDOM = DOM => {
