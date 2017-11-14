@@ -2,12 +2,9 @@
 
 const db = require("./Database")
 const innerDB = require("./innerHTML/innerDB")
-<<<<<<< HEAD
+const writeMessages = require("./messages/messagesPopulator")
 const taskDom = require("./tasks/taskDom")
 const articleDOM = require("./articles/articleDOM")
-=======
-const writeMessages = require("./messages/messagesPopulator")
->>>>>>> 649643164f09e8d3e593e7103f8b4897a0fed5ed
 
 
 const populateDOM = DOM => {
@@ -17,6 +14,7 @@ const populateDOM = DOM => {
         document.getElementById(el.id.value).innerHTML = el.inner.value;
     })
     articleDOM()
+
     taskDom()
     writeMessages()
 }

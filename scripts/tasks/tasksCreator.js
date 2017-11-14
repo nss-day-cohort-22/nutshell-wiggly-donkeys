@@ -5,8 +5,6 @@
 const db = require("../Database")
 const tasksFactory = require("./tasksFactory")
 const taskDom = require("./taskDom")
-//pull the database from local storage
-// let Database = JSON.parse(localStorage.getItem("Database"))
 
 //find 'tasks' div in the html
 const tasksEl = document.getElementById("tasks")
@@ -31,7 +29,7 @@ function taskStore() {
         Database.tasks.push(newTask);
         // Sort the task by their `id` property
         Database.tasks.sort((p, n) => p.taskId + n.taskId);
-        db.save(Database);
+        db.save(Database, "tasks");
         //hide form and save button until new task button is clicked
         document.getElementById("taskForm").classList.add("hidden")
         document.getElementById("saveBtn").classList.add("hidden")

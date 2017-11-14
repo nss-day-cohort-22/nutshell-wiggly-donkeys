@@ -15,7 +15,6 @@ const writeMessages = () => {
             <p>${messages.message}</p>
         <div>`
     })
-    db.save(Database);
 }
 
 module.exports = writeMessages
