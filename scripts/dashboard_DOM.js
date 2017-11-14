@@ -1,9 +1,11 @@
-//Author: Paul Ellis; Purpose: function that populates the dashboard
-const articleDOM = require("./articles/articleDOM")
+// //Author: Paul Ellis; Purpose: function that populates the dashboard
+
 const db = require("./Database")
-const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))//access the user
-const innerDB = require("./innerHTML/innerDB")
 const Database = db.load();
+const currentUser = JSON.parse(sessionStorage.getItem("currentUser"))//access the user
+const articleDOM = require("./articles/articleDOM")
+const taskDom = require("./tasks/taskDom")
+const innerDB = require("./innerHTML/innerDB")
 
 const populateDOM = DOM => {
     innerDB.forEach(el => {
@@ -11,8 +13,8 @@ const populateDOM = DOM => {
         
 
     })
-
     articleDOM()
+    taskDom()
 }
 
 module.exports = populateDOM
