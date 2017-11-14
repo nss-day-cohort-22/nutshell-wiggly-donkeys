@@ -3,7 +3,8 @@
 const db = require("./Database")
 const innerDB = require("./innerHTML/innerDB")
 const writeMessages = require("./messages/messagesPopulator")
-
+const taskDom = require("./tasks/taskDom")
+const articleDOM = require("./articles/articleDOM")
 
 const populateDOM = DOM => {
     const Database = db.load();
