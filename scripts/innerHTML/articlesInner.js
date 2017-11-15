@@ -8,6 +8,7 @@ const articlesHTML = {
     "inner": {
         enumerable: true,
         value: `
+        <section class="container">        
     <article class="form">
         <form name="article__form">
         <h2>Share fake news and annoy your friends!</h2>
@@ -37,6 +38,7 @@ const articlesHTML = {
         hello
         </div>
         
+        </section>
         
         
         

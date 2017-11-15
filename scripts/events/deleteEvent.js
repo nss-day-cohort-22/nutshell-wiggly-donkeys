@@ -3,8 +3,8 @@
 //┌(° ͜ʖ͡°)┘
 
 const db = require("../Database")
-let deleteArticle = function(event) {
-    const articleEl = document.getElementById("article__post")
+let deleteEvent = function(event) {
+    const eventsEl = document.getElementById("event__post")
     const btnId = event.target.id
     const btnIdNum = btnId.split("__")[1];
     
@@ -12,21 +12,19 @@ let deleteArticle = function(event) {
     if (btnId.startsWith("button__")) {
         const Database = db.load()
         
-        //the Harrison Ford of code.
-        let articleToRemove = document.getElementById("article__" + btnIdNum)
-        console.log("You removed an article", articleToRemove)
+        let eventToRemove = document.getElementById("event__" + btnIdNum)
+        console.log("You removed an event", eventToRemove)
         
-        //Ryan Gosling or something
-        articleEl.removeChild(articleToRemove)
+        eventsEl.removeChild(eventToRemove)
+
         //parse id number
         const parseId = parseInt(btnIdNum)
         //filter out unworthy ids
-        const filterArray = Database.articles.filter(article => article.id !== parseId)
+        const filterArray = Database.events.filter(event => event.id !== parseId)
         // set our db to the new filtered array
-        Database.articles = filterArray
+        Database.events = filterArray
         //resave it to our db
-        db.save(Database, "articles")
+        db.save(Database, "events")
     }
 }
-module.exports = deleteArticle
-
+module.exports = deleteEvent

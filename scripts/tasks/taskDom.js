@@ -22,10 +22,15 @@ const writeTask = () => {
             <label for="markComplete">Check if Complete.</label>
     </article>
     `
+
                 }
         })
         taskOut.addEventListener("click", taskDelete)
         taskOut.addEventListener("keyup", taskEdit)
+
+    })
+    // db.save(Database);
+
 }
 
 module.exports = writeTask
