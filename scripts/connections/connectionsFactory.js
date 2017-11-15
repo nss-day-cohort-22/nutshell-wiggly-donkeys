@@ -9,7 +9,7 @@ const connectionFactory = (user, friend) => {
     Database.connections = Database.connections || [];//if Database.connections doesn't exist, set to empty array
     if (Database.connections.length === 0) {connectionIdGen = idGenerator()}//if there are now connections yet, use idGenerator normally
     else {//if connections array exists in storage....
-        Database.connections.sort((p,n) => n.connectionId - p.connectionId);//..sort connections array to have highest id number at index 0
+        Database.connections.sort((p, n) => n.connectionId - p.connectionId);//..sort connections array to have highest id number at index 0
         connectionIdGen = idGenerator(Database.connections[0].connectionId);//set instance of id generator to be passed highest id number for it's starting number
     }
     let newConnection =  Object.create(null, {
