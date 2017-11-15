@@ -1,25 +1,6 @@
 // Authors : Chase, John, Max, and Paul
 // Purpose : Nutshell's Database
 
-
-const Database = Object.create(null, {
-    load: {
-        value: () => JSON.parse(localStorage.getItem("Database")) || {}
-    },
-    save: {
-        value: (db, flag) => {
-            localStorage.setItem("Database", JSON.stringify(db));
-            localStorage.setItem("changedKey", JSON.stringify(flag))
-        }
-    }
-})
-
-module.exports = Database
-
-
-
-
-
 //imports - Add as we go boys DEPRECATED
 // const messages = require("./messages/messagesFactory");
 // const users = require("./users/usersCreator");
@@ -43,3 +24,17 @@ module.exports = Database
 
 // // Serialize and store database
 // localStorage.setItem("Database", JSON.stringify(Database));
+
+const Database = Object.create(null, {
+    load: {
+        value: () => JSON.parse(localStorage.getItem("Database")) || {}
+    },
+    save: {
+        value: (db, flag) => {
+            localStorage.setItem("Database", JSON.stringify(db));
+            localStorage.setItem("changedKey", JSON.stringify(flag))
+        }
+    }
+})
+
+module.exports = Database

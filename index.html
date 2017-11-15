@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<nav>Welcome to Nutshell!</nav>
+  <nav class="jumbotron" id="nav">NutShell</nav>
 
   <header></header>
 
@@ -22,22 +22,24 @@
     <!-- Register/Login Modal -->
     <div id="regForm" class="d-flex flex-column justify-content-center align-items-center jumbotron">
       <h1 class="display-1">Welcome</h1>
-      <h2 class="text-muted">Bust that Nutshell Below</h2>
+      <h2 class="text-muted">See it all in a nutshell</h2>
       <div class="d-flex flex-column">
-      <input id="regForm_username" placeholder="username"></input>
-      <input id="regForm_email" placeholder="email"></input>
-      <div class="d-flex flex-row justify-content-between mt-2">
-        <button id="regForm_saveButt" class="regButts">Register</button>
-        <button id="regForm_login" class="regButts">Login</button>
+        <input id="regForm_username" placeholder="username"></input>
+        <input id="regForm_email" placeholder="email"></input>
+        <div class="d-flex flex-row justify-content-between mt-2">
+          <button id="regForm_saveButt" class="regButts">Register</button>
+          <button id="regForm_login" class="regButts">Login</button>
+        </div>
       </div>
     </div>
+
+    <div id="dashboard" class="container">
+      <div id="friendsList"></div>
+      <div id="messages"></div>
+      <div id="tasks"></div>
+      <div id="events"></div>
+      <div id="articles"></div>
     </div>
-
-
-    <div id = "messages"></div>
-    <div id = "tasks"></div>
-    <div id = "events"></div>
-    <div id = "articles"></div>
 
 
   </main>
