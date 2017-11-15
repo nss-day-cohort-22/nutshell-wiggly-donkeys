@@ -10,6 +10,7 @@ const messagesHTML = {
     {
         enumerable: true,
         value: `
+        <section class="container">        
                 <form id="messageForm" name="messageForm">
                         <h2 id=messageForm_title>New Message</h2>
                         <textarea id=messageForm_text rows="4" cols= "20"></textarea>
@@ -17,6 +18,7 @@ const messagesHTML = {
                     <button id="messageForm_saveButt">Send</button>
                     <div id="messageOutput">
                     </div>
+                    </section>
                `
     }
 }

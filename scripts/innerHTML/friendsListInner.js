@@ -8,8 +8,16 @@ const friendsHTML = {
     "inner": {
         enumerable: true,
         value: `
-        <input id="addFriend_input" placeholder="Don't be lonely. Type a friend's username." size="50">
+        <section class="container">
+        <h1>Add a friend</h1>
+        <input type="text" id="addFriend_input" placeholder="Friend username.">
         <button id="addFriend_button">Add Friend</button>
+        </section>
+        <section class="container" id="myFriends">
+        <h2>My Friends</h2>
+        <section class="container" id="friendsListTarget">
+        </section>
+        </section>
         `
     }
 }

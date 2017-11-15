@@ -4,6 +4,7 @@ const db = require("./Database")
 const innerDB = require("./innerHTML/innerDB")
 const writeMessages = require("./messages/messagesPopulator")
 const articleDOM = require("./articles/articleDOM")
+const friendsPop = require("./connections/friendsListPop")
 
 const populateDOM = DOM => {
     const Database = db.load();
@@ -15,6 +16,7 @@ const populateDOM = DOM => {
     articleDOM()
     taskDom()
     writeMessages()
+    friendsPop()
 }
 
 module.exports = populateDOM

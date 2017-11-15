@@ -31,7 +31,6 @@ const connectionFactory = (user, friend) => {
     })
     Database.connections.push(newConnection);
     db.save(Database, "connections");
-    console.log(Database.connections)
 }
 
 module.exports = connectionFactory
