@@ -3,7 +3,7 @@ const idGenerator = require("../idGenerator")
 const db = require("../Database");
 let messagesIdGenerator = null;
 
-const messagesFactory = (message) => {
+const messagesFactory = (id, message) => {
     const Database = db.load();//use load method of database object to get local storage
     Database.messages = Database.messages || [];//if Database.users doesn't exist, set to empty array
     if (Database.messages.length === 0) {messagesIdGenerator = idGenerator()}//if there are now users yet, use idGenerator normally
@@ -13,7 +13,8 @@ const messagesFactory = (message) => {
     }
     return Object.create(null, {
         "messageId": {
-            value: messagesIdGenerator.next().value,
+            value: (id === null) ? messagesIdGenerator.next().value : id,
+            // value: messagesIdGenerator.next().value,
             enumerable: true
         },
         "userId": {
