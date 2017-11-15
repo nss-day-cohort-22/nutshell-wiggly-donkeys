@@ -1,76 +1,44 @@
 //John Dulaney and Max
 // This file adds some starting structure for our event Create Form.
+//┌(° ͜ʖ͡°)┘
 
 //the creator requires the eventsFactory
+const db = require("../Database")
 const eventsFactory = require("./eventsFactory");
-
-//pull the database from local storage
-const Database = JSON.parse(localStorage.getItem("Database"))
-
-Database.events = Database.events || [];
+const eventsDOM = require("./eventsDOM")
 
 //find 'events' div in the html
 const eventsEl = document.getElementById("events")
 
 //when the events save button is clicked, take what is in the events text box and store it in Database.events, then push to local storage
-function eventsStore () {
-    if (event.target.id === "eventForm_saveButt") {
-        const newevents = eventsFactory(
+function eventsStore() {
+    const Database = db.load()
+    //Create an events key or make an empty array
+    Database.events = Database.events || [];
+
+    // Sort the events by their `id` property, descending
+    Database.events.sort((p, n) => n.id - p.id);
+
+    if (event.target.id === "eventForm__saveButt") {
+        console.log("im working")
+        const newEvents = eventsFactory(
             document.querySelector("input[name='eventForm__name']").value,
             document.querySelector("input[name='eventForm__date']").value,
-            document.querySelector("textarea[name='eventForm__location']").value
+            document.querySelector("input[name='eventForm__location']").value
         );
-        Database.events.push(newevents);
-        localStorage.setItem("Database", JSON.stringify(Database));
+
+        Database.events.unshift(newEvents);
+
+         //save to db
+         db.save(Database, "events")
+         
+        //run dom function
+        eventsDOM()
+
+        //reset form
+        document.forms["event__form"].reset();
     }
 }
 
 //run the events button save event above that saves to the Database (eventsStore) when anything is clicked in the events div element
-function eventsListen () {
-    eventsEl.addEventListener("click", eventsStore)
-}
-
-//run the eventsListen function
-eventsListen();
-
-module.exports = Database
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //imports
-// const eventFactory = require("./eventFactory")
-// const Database = require("../Database.js")
-
-// //Create empty array if we need it
-// Database.events = Database.events || []
-
-// // Add click event listener to the save button
-// const saveEventEl = document.getElementById("eventForm__saveButt").
-// addEventListener("click", event => {
-
-// // Create a new event object
-// const newEvent = eventFactoryValue(
-//     document.querySelector("input[name='eventForm__name']").value,
-//     document.querySelector("input[name='eventForm__date']").value,
-//     document.querySelector("textarea[name='eventForm__location']").value
-//         )
-
-// // Add new event to array
-// Database.events.push(newEvent);
-
-// // Sort the events by their `id` property, descending
-// Database.events.sort((p, n) => n.id - p.id);
-
-// })
+eventsEl.addEventListener("click", eventsStore)

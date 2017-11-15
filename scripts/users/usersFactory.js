@@ -9,7 +9,7 @@ const usersFactory = (name, email) => {
     Database.users = Database.users || [];//if Database.users doesn't exist, set to empty array
     if (Database.users.length === 0) {userIdGen = idGenerator()}//if there are now users yet, use idGenerator normally
     else {//if users array exists in storage....
-        Database.users.sort((p,n) => n.userId - p.userId);//..sort users array to have highest id number at index 0
+        Database.users.sort((p, n) => n.userId - p.userId);//..sort users array to have highest id number at index 0
         userIdGen = idGenerator(Database.users[0].userId);//set instance of id generator to be passed highest id number for it's starting number
     }
     let newUser =  Object.create(null, {//create new user object

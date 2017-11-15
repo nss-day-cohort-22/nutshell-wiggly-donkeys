@@ -9,16 +9,17 @@ const messagesHTML = {
     "inner":
     {
         enumerable: true,
-        value: `<!-- messages input -->
-                <div id="messages">
-                    <div id="messageOutput">
-                    </div>
-                    <form id="messageForm" name="messageForm">
+        value: `
+        <section class="container">        
+                <form id="messageForm" name="messageForm">
                         <h2 id=messageForm_title>New Message</h2>
                         <textarea id=messageForm_text rows="3" cols= "60"></textarea>
                     </form>
-                    <button id="messageForm_saveButt">Post Message</button>
-                <div>`
+                    <button id="messageForm_saveButt">Send</button>
+                    <div id="messageOutput">
+                    </div>
+                    </section>
+               `
     }
 }
 

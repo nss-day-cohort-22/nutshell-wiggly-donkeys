@@ -4,28 +4,29 @@
 
 //imports
 const db = require("../Database")
+const editEvents  = require("./editEvents")
+const deleteEvent  = require("./deleteEvent")
 
 
-//function for scope
+//function
 const eventsDOM = () => {
-
     const Database = db.load()
-    // get events
+    Database.events = Database.events || [];    
     const eventsEl = document.getElementById("event__post")
-    eventsEl.innerHTML = ""
-
-    Database.events.forEach(evPush => {
-        eventsEl.innerHTML += `
-                <br>
-    <events id=${evPush.id}>
-    <h1>out put here</h1>
-        
-        <div>events you shared on ${evPush.date}</div>
-        <div>${evPush.url}</div>
-        <div>${evPush.note}</div>
-        <br>
-        </events>
+        eventsEl.innerHTML = ""
+            Database.events.forEach(p => {
+                eventsEl.innerHTML += `
+            <section id="eventStyle__${p.id}">
+                <h1>${p.name}</h1>
+                    <div>Event Date: ${p.date}</div>
+                    <div>Event Location:${p.location}</div>
+                    <input type="button" id="button__${p.id}" class="event__button" value="Delete this event">
+                    <input type="button" id="editButton__${p.id}" class="event__button" value="Edit this event">
+            </section>
         `
     })
+    eventsEl.addEventListener("click", deleteEvent)
+    eventsEl.addEventListener("click", editEvents)
+    
 }
 module.exports = eventsDOM

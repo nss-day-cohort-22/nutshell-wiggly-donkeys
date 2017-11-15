@@ -4,7 +4,20 @@
     padding: 2em;
     margin: auto;
     z-index: 1;
-    border: 1px solid tomato;
+    background-color: orange;
+    box-shadow: 10px 5px 20px black;
+}
+
+body {
+    background-image: url("../nuts-walnuts.jpg");
+}
+
+button {
+    box-shadow: 10px 5px 20px black;
+    border: .5px solid rgba(128,128,128,.1);
+    border-radius: 15px;
+    background-color: white;
+    color: black;
 }
 
 .hidden {
@@ -137,4 +150,41 @@ border-radius: 10px;
 
 ::-webkit-scrollbar-thumb:hover {
 background: rgb(49, 49, 49);  
+.article__card {
+    border: 1px solid tomato;
+    margin: 10px;
+    padding: 10px;
+}
+
+#eventStyle__1 {
+    border: 1px solid black;
+}
+
+.dashboardDiv {
+    text-align: center;
+    box-shadow: 10px 5px 20px black;
+    border: .5px solid rgba(128,128,128,.1);
+    border-radius: 5px;
+    padding: .75em 1em;
+    margin: 1em auto;
+    background-color: rgba(255,165,0,.95)
+}
+
+#friendsList input, button {
+    padding: 1em;
+    margin: 2em;
+}
+
+#nav {
+    background-color: orange;
+    color: white;
+    font-family: cursive;
+    font-size: 3em;
+    box-shadow: 10px 5px 20px black;
+    background-color: rgba(255,165,0,.98)
+}
+
+#myFriends {
+    border: 2px solid brown;
+    border-radius: 15px;
 }
