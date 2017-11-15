@@ -14,13 +14,11 @@ const writeMessages = () => {
         )
         //if the session's userId is the same as the messages, make the bubble align to the left, otherwise: right.
         let bubbleAlign = ""
-        console.log(currentUser.userId, messages.userId)
         if (JSON.parse(sessionStorage.getItem("currentUser")) === messages.userId) {
             bubbleAlign = "left"
         } else {
             bubbleAlign = "right"
         }
-        console.log(currentUser)
         messageOut.innerHTML += `
         <div class="messageOut_container messageOut_${bubbleAlign}">
             <div class="messageOut_user">From: ${currentUser.username}</h4>
