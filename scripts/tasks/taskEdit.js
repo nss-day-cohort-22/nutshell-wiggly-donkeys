@@ -10,7 +10,7 @@ const editTask = event => {
     let text = event.target.innerHTML
     const taskSelected = Database.tasks.find(task => taskClicked === task.taskName);
     // let code = (event.keyCode ?event.keyCode : event.which);
-    if(event.keyCode === 13) { //Enter keycode
+    if (event.keyCode === 13) { //Enter keycode
         event.preventDefault()
         event.target.blur()
         taskSelected.taskName = text
