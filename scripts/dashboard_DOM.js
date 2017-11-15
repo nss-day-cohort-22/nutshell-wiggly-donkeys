@@ -2,8 +2,10 @@
 
 const db = require("./Database")
 const innerDB = require("./innerHTML/innerDB")
-const writeMessages = require("./messages/messagesPopulator")
 const articleDOM = require("./articles/articleDOM")
+const eventsDOM = require("./events/eventsDOM")
+const taskDom = require("./tasks/taskDom")
+const writeMessages = require("./messages/messagesPopulator")
 const friendsPop = require("./connections/friendsListPop")
 
 const populateDOM = DOM => {
@@ -14,6 +16,7 @@ const populateDOM = DOM => {
         document.getElementById(el.id.value).classList.add("dashboardDiv", "d-flex");
     })
     articleDOM()
+    eventsDOM()
     taskDom()
     writeMessages()
     friendsPop()

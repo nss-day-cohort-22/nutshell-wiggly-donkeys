@@ -14,7 +14,7 @@ const eventsHTML = {
         <h2>Add Upcoming Events</h2>
         <label>Name</label>
             <div class="form-group col-3">
-                <input type="text" name='eventForm__url' value="" id="" class="form-control" placeholder="Name of Event.">
+                <input type="text" name='eventForm__name' value="" id="" class="form-control" placeholder="Name of Event.">
             </div>
         <label>Date</label>
             <div class="form-group col-3">

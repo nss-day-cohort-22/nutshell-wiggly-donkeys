@@ -4,30 +4,25 @@
 
 //imports
 const db = require("../Database")
+const deleteArticle  = require("./articleDelete")
 
-//function for scope
+//function
 const articleDOM = () => {
     const Database = db.load()
     Database.articles = Database.articles || [];
     const articleEl = document.getElementById("article__post")
         articleEl.innerHTML = ""
-    // const deleteButton = deleteArticle()
-             Database.articles.forEach(artPush => {
+             Database.articles.forEach(p => {
                 articleEl.innerHTML += `
-                <article id=${artPush.id}>
-                    <br>
-                    <h1>out put here</h1>
-                        <div>Article you shared on ${artPush.date}</div>
-                        <div>${artPush.url}</div>
-                        <div>${artPush.note}</div>
-                        <input type="button" id="articleForm__deleteButt" class="article__button" value="Delete this article">
-                    <br>
+                <article id=article__${p.id} class="article__card col-6">
+                        <div>Article you shared on ${p.date}</div>
+                        <div><a href="${p.url}">Link to Story</a></div>
+                        <div>Notes: ${p.note}</div>
+                        <input type="button" id="button__${p.id}" class="article__button" value="Delete this article">
                 </article>
                         `
                     })
+    articleEl.addEventListener("click", deleteArticle)
 }
-
-    // <div>${artPush.userID}</div>
-    // <dibv>${deleteButton}</dibv>
 
 module.exports = articleDOM
