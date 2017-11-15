@@ -7,9 +7,6 @@ const eventsDOM = require("./events/eventsDOM")
 const taskDom = require("./tasks/taskDom")
 const writeMessages = require("./messages/messagesPopulator")
 
-const taskDom = require("./tasks/taskDom")
-const articleDOM = require("./articles/articleDOM")
-
 
 const friendsPop = require("./connections/friendsListPop")
 
