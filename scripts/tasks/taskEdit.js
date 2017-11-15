@@ -8,11 +8,9 @@ const editTask = event => {
     Database.tasks = Database.tasks || [];
     const taskClicked = event.target.id
     let text = event.target.innerHTML
-    console.log(taskClicked)
     const taskSelected = Database.tasks.find(task => taskClicked === task.taskName);
-    console.log(taskSelected.taskName)
-    let code = (event.keyCode ?event.keyCode : event.which);
-    if (code === 13) { //Enter keycode
+    // let code = (event.keyCode ?event.keyCode : event.which);
+    if(event.keyCode === 13) { //Enter keycode
         event.preventDefault()
         event.target.blur()
         taskSelected.taskName = text

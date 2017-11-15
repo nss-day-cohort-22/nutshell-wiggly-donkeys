@@ -8,7 +8,6 @@ const taskDom = require("./tasks/taskDom")
 const writeMessages = require("./messages/messagesPopulator")
 
 
-
 const friendsPop = require("./connections/friendsListPop")
 
 
