@@ -7,10 +7,12 @@ const tasksHTML = {
     },
     "inner": {
         enumerable: true,
-        value: `   <div class="button">
+        value: `   
+        <section class="container">        
+        <div class="button">
         <button id="taskForm__newButt">New Task</button>
     </div>
-    <form id="taskForm" name="taskForm" class="taskForm hidden">
+    <form id="taskForm" name="taskForm" class="taskForm container hidden">
         <div>
             <label for="taskForm__taskName">Name:</label>
             <input type="text" id="taskForm__taskName" name="taskForm__taskName">
@@ -25,6 +27,7 @@ const tasksHTML = {
         </div>
         <section id="tasks__Post" class="taskOutput">
         <h1>TASK LIST</h1>
+        </section>
         </section>
         `
     }

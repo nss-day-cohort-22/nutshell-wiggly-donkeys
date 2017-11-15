@@ -8,8 +8,9 @@ const eventsHTML = {
     "inner": {
         enumerable: true,
         value: `
+        <section class="container">        
     <section class="form">
-        <form name="event__form">
+        <form name="event__form" class="container">
         <h2>Add Upcoming Events</h2>
         <label>Name</label>
             <div class="form-group col-3">
@@ -28,12 +29,14 @@ const eventsHTML = {
             </div>
         </form>
     </section>
-    <div id="event__post" class="output"> 
+    <div id="event__post" class="container output"> 
     <br>
     <br>
     <br>
     <br>
     </div>
+    </section>
+    
     `
     }
 }

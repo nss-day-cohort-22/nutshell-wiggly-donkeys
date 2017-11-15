@@ -1,8 +1,6 @@
 // Authors : Chase, John, Max, and Paul
 // Purpose : Nutshell's Database
 
-<<<<<<< HEAD
-=======
 //imports - Add as we go boys DEPRECATED
 // const messages = require("./messages/messagesFactory");
 // const users = require("./users/usersCreator");
@@ -27,7 +25,6 @@
 // // Serialize and store database
 // localStorage.setItem("Database", JSON.stringify(Database));
 
->>>>>>> master
 const Database = Object.create(null, {
     load: {
         value: () => JSON.parse(localStorage.getItem("Database")) || {}

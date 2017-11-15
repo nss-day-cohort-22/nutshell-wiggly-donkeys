@@ -1,15 +1,12 @@
 // Authors : Chase, John, Max, and Paul
 // Purpose : ¯\_(ツ)_/¯
-<<<<<<< HEAD
-const Database = require("./Database")
-=======
 
 const Database = require("./Database");
->>>>>>> master
 const usersRegister = require("./users/usersRegister");
 const usersLogin = require("./users/usersLogin");
 const messagesPopulator = require("./messages/messagesPopulator")
 const tasksCreator = require("./tasks/tasksCreator")
+const addinFriends = require("./connections/connectionsCreator")
 
 // creators
 const messagesCreator = require("./messages/messagesCreator")
