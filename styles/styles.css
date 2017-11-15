@@ -1,3 +1,5 @@
+
+
 #regForm {
     padding: 2em;
     margin: auto;
@@ -16,4 +18,123 @@
 .form {
     margin: 35px;
 
+}
+
+/*********** MESSAGES SECTION *************/
+
+.messageOut_user {
+    font-size: 14px;
+    box-sizing: border-box;
+    
+}
+
+.messageOut_message {
+    font-size: 12px;
+    box-sizing: border-box;
+    
+}
+
+/* EDIT BUTTON */
+.messageOut_edit {
+    font-family: Arial;
+    font-size: 10px;
+    padding: 1px, .2px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3px;
+}
+.messageOut_left > .messageOut_edit {
+    left: 0;
+}
+
+
+.messageOut_container {
+    position: relative;
+}
+
+
+/* MESSAGE BUBBLES */
+/* left bubble */
+.messageOut_left {
+	background: #e0e0e0;
+    border-radius: .4em;
+    color: black;
+    text-align: left;
+    padding-left: 5%;
+    box-sizing: border-box;
+    margin-right: 35%;
+    margin-left: 5%;
+}
+
+.messageOut_left:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 21px solid transparent;
+	border-right-color: #e0e0e0;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10.5px;
+	margin-left: -21px;
+}
+/* right bubble */
+.messageOut_right {
+	background: #438af3;
+    border-radius: .4em;
+    color: rgb(233, 233, 233);
+    text-align: right;
+    padding-right: 5%;
+    box-sizing: border-box;
+    margin-left: 35%;
+    margin-right: 5%;
+}
+
+.messageOut_right:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 21px solid transparent;
+	border-left-color: #438af3;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -10.5px;
+	margin-right: -21px;
+}
+
+/* SCROLL BAR */
+#messageOutput {
+    border: none;
+    padding: 5px;
+    font: 24px/36px sans-serif;
+    width: 75%;
+    height: 500px;
+    overflow: scroll;
+    }
+    
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid grey;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: grey;  
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgb(49, 49, 49);  
 }

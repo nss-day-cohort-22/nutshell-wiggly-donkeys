@@ -18,18 +18,24 @@ let currentMessage = null
 document.getElementById("messages").addEventListener(
     "click", e => {
         if (e.target.id.startsWith("messageOut_edit")) {
-            console.log("CLICKED EDIT")
             // Get the database from local storage, or empty object if null
             const Database = db.load();
             // Which article did user click on?
             currentMessage = Database.messages.find(
                 m => m.messageId === parseInt(e.target.id.split("-")[1])
             )
-            // Put values in the article form
-            document.getElementById("messageForm_text").value = currentMessage.message
-            editMode = true
+            //checks to see if the current user is the creator of the message
+            //if it is the current user, then the message text is placed in the text box for editing and editmode=true
+            if (JSON.parse(sessionStorage.getItem("currentUser")) === currentMessage.userId) {
+                // Put values in the article form
+                document.getElementById("messageForm_text").value = currentMessage.message;
+                editMode = true;
+            //if it is not the current user, then the user is alerted and editmode=false
+            } else {
+                alert("Sorry, you can only edit your messages");
+                editMode = false;
+            }
         }
-    editMode = true
     }
 )
 //when the message save button is clicked, take what is in the message text box and store it in Database.messages, then push to local storage
@@ -40,10 +46,7 @@ function messageStore () {
     //  Initially Sort the task by their `id` property //
     Database.messages.sort((p, n) => p.messageId - n.messageId)
 
-
     if (event.target.id === "messageForm_saveButt") {
-
-        console.log(editMode)
         //when in edit mode, find the message you are currently editing and save it to that message object in the database.
         if (editMode === true) {
 
@@ -51,7 +54,6 @@ function messageStore () {
             const messageIndex = Database.messages.findIndex(
                 messages => messages.messageId === currentMessage.messageId
             )
-            console.log(Database.messages[messageIndex].messageId)
             // Update the message object at the matching index
             Database.messages[messageIndex] = messagesFactory(
                 //insert old messageId
@@ -66,6 +68,7 @@ function messageStore () {
         //when not in edit mode, save the message as usual
         else {
             const newMessage = messagesFactory(
+                null,
                 document.getElementById("messageForm_text").value
             );
             Database.messages.push(newMessage);
@@ -73,6 +76,7 @@ function messageStore () {
             Database.messages.sort((p, n) => p.messageId - n.messageId);
             db.save(Database, "messages");
             document.forms["messageForm"].reset();
+
             writeMessages();
         }
     }

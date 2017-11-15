@@ -11,13 +11,13 @@ const messagesHTML = {
         enumerable: true,
         value: `<!-- messages input -->
                 <div id="messages">
-                    <form id="messageForm" name="messageForm">
-                        <h2 id=messageForm_title>New Message</h2>
-                        <textarea id=messageForm_text rows="4" cols= "20"></textarea>
-                    </form>
-                    <button id="messageForm_saveButt">Send</button>
                     <div id="messageOutput">
                     </div>
+                    <form id="messageForm" name="messageForm">
+                        <h2 id=messageForm_title>New Message</h2>
+                        <textarea id=messageForm_text rows="3" cols= "60"></textarea>
+                    </form>
+                    <button id="messageForm_saveButt">Post Message</button>
                 <div>`
     }
 }
