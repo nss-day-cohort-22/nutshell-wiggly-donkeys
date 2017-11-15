@@ -29,3 +29,4 @@ let deleteArticle = function(event) {
     }
 }
 module.exports = deleteArticle
+

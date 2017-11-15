@@ -22,7 +22,10 @@ const articleDOM = () => {
                 </article>
                         `
                     })
+
+
     articleEl.addEventListener("click", deleteArticle)
+
 }
 
 module.exports = articleDOM
