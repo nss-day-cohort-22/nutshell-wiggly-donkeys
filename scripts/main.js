@@ -4,6 +4,7 @@
 const Database = require("./Database");
 const usersRegister = require("./users/usersRegister");
 const usersLogin = require("./users/usersLogin");
+const messagesDom = require("./messages/messagesDom")
 const addinFriends = require("./connections/connectionsCreator")
 
 // creators
