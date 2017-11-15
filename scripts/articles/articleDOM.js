@@ -5,8 +5,6 @@
 //imports
 const db = require("../Database")
 const deleteArticle  = require("./articleDelete")
-// const articleEl = document.getElementById("article__post")
-// const deleteButton = deleteArticle()
 
 //function
 const articleDOM = () => {
@@ -14,16 +12,13 @@ const articleDOM = () => {
     Database.articles = Database.articles || [];
     const articleEl = document.getElementById("article__post")
         articleEl.innerHTML = ""
-             Database.articles.forEach(artPush => {
+             Database.articles.forEach(p => {
                 articleEl.innerHTML += `
-                <article id=article__${artPush.id} class="article__card col-6">
-                    <br>
-                        <div>Article you shared on ${artPush.date}</div>
-                        <div><a href="${artPush.url}">Link to Story</a></div>
-                        <div>Notes: ${artPush.note}</div>
-                        <input type="button" id="button__${artPush.id}" class="article__button" value="Delete this article">
-                        
-                    <br>
+                <article id=article__${p.id} class="article__card col-6">
+                        <div>Article you shared on ${p.date}</div>
+                        <div><a href="${p.url}">Link to Story</a></div>
+                        <div>Notes: ${p.note}</div>
+                        <input type="button" id="button__${p.id}" class="article__button" value="Delete this article">
                 </article>
                         `
                     })

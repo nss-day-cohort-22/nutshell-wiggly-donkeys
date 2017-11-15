@@ -1,6 +1,6 @@
-// // John Dulaney
-// // This module creates a function that retires replicants... and code. Use it wisely.
-// //┌(° ͜ʖ͡°)┘
+// John Dulaney
+// This module creates a function that retires replicants... and code. Use it wisely.
+//┌(° ͜ʖ͡°)┘
 
 const db = require("../Database")
 let deleteArticle = function(event) {

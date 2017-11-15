@@ -9,7 +9,6 @@ const usersLogin = require("./users/usersLogin");
 const messagesPopulator = require("./messages/messagesPopulator")
 const tasksCreator = require("./tasks/tasksCreator")
 const messagesCreator = require("./messages/messagesCreator")
+const eventsCreator = require("./events/eventsCreator")
 const articleCreator = require("./articles/articleCreator");
 const storageListener = require("./storage-listener");
-
-
