@@ -14,7 +14,6 @@ const populateDOM = DOM => {
         document.getElementById(el.id.value).innerHTML = el.inner.value;
     })
     articleDOM()
-
     taskDom()
     writeMessages()
 }

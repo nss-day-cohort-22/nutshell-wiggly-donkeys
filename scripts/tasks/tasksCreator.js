@@ -14,7 +14,6 @@ function taskStore() {
     // Sort the task by their `id` property, descending
     const Database = db.load()
     Database.tasks = Database.tasks || [];
-    Database.tasks.sort((p, n) => p.taskId + n.taskId);
     if (event.target.id === "taskForm__newButt") {
         document.getElementById("taskForm").classList.remove("hidden")
         document.getElementById("saveBtn").classList.remove("hidden")
@@ -28,7 +27,7 @@ function taskStore() {
         //push the new message to the database
         Database.tasks.push(newTask);
         // Sort the task by their `id` property
-        Database.tasks.sort((p, n) => p.taskId + n.taskId);
+        // Database.tasks.sort((p, n) => p.taskId - n.taskId);
         db.save(Database, "tasks");
         //hide form and save button until new task button is clicked
         document.getElementById("taskForm").classList.add("hidden")
