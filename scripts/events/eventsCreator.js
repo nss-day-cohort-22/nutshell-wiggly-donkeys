@@ -19,14 +19,15 @@ function eventsStore() {
     // Sort the events by their `id` property, descending
     Database.events.sort((p, n) => n.id - p.id);
 
-    if (event.target.id === "eventForm_saveButt") {
+    if (event.target.id === "eventForm__saveButt") {
+        console.log("im working")
         const newEvents = eventsFactory(
             document.querySelector("input[name='eventForm__name']").value,
             document.querySelector("input[name='eventForm__date']").value,
             document.querySelector("input[name='eventForm__location']").value
         );
 
-        Database.events.push(newEvents);
+        Database.events.unshift(newEvents);
 
          //save to db
          db.save(Database, "events")
