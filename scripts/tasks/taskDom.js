@@ -16,21 +16,18 @@ const writeTask = () => {
                 if (t.completed === false) {
                         taskOut.innerHTML += `
     <article class="taskItem" id="task${t.taskId}">
-            <h2 id="${t.taskName}" class="name" contenteditable="true">${t.taskName}</h2>
+            <h2 id="${t.taskName}" class="name" contenteditable="true" style="display:inline-block;">${t.taskName}</h2>
             <h4>Expected Completion Date: ${t.completionDate}</h4>
             <input type="checkbox" id="${t.taskId}" name="complete" value="completed">
             <label for="markComplete">Check if Complete.</label>
     </article>
     `
-
                 }
         })
         taskOut.addEventListener("click", taskDelete)
-        taskOut.addEventListener("keyup", taskEdit)
 
+        taskOut.addEventListener("keydown", taskEdit)
     }
-    // db.save(Database);
-
 
 
 module.exports = writeTask

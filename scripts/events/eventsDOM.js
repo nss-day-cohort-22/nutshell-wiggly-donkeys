@@ -4,18 +4,23 @@
 
 //imports
 const db = require("../Database")
-const editEvents  = require("./editEvents")
-const deleteEvent  = require("./deleteEvent")
+const editEvents = require("./editEvents")
+const deleteEvent = require("./deleteEvent")
 
 
-//function
+//function that populates the DOM using the form from ../innerHTML/eventsInner.js
 const eventsDOM = () => {
+    //load db for in this scope
     const Database = db.load()
-    Database.events = Database.events || [];    
+    //grat database.events and set ut, or , set it to an empty array
+    Database.events = Database.events || [];
+    //get html id set for population    
     const eventsEl = document.getElementById("event__post")
-        eventsEl.innerHTML = ""
-            Database.events.forEach(p => {
-                eventsEl.innerHTML += `
+    //innerhtml clear the area
+    eventsEl.innerHTML = ""
+    //foreach on the events , lists this innerHTML for each event in the db and plugs the correct info
+    Database.events.forEach(p => {
+        eventsEl.innerHTML += `
             <section id="eventStyle__${p.id}">
                 <h1>${p.name}</h1>
                     <div>Event Date: ${p.date}</div>
@@ -25,8 +30,11 @@ const eventsDOM = () => {
             </section>
         `
     })
+    //add click listeners to the event div that will activate edit and delete. this shit dont work.
     eventsEl.addEventListener("click", deleteEvent)
     eventsEl.addEventListener("click", editEvents)
-    
+
 }
+
+//exports
 module.exports = eventsDOM

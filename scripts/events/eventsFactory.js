@@ -13,33 +13,32 @@ const eventsIdGenerator = idGenerator();
 //factory for events
 const eventsFactory = (name, date, location) => {
     return Object.create(null, {
-        "id":{
+        "id": {
             value: eventsIdGenerator.next().value,
             enumerable: true,
             writable: true
         },
-        "userId":{
+        "userId": {
             value: JSON.parse(sessionStorage.getItem("currentUser")),
             enumerable: true,
             writable: true
         },
-        "name":{
+        "name": {
             value: name,
             enumerable: true,
             writable: true
         },
-        "date":{
+        "date": {
             value: date,
             enumerable: true,
             writable: true
         },
-        "location":{
+        "location": {
             value: location,
             enumerable: true,
             writable: true
-            }
         }
-    )
+    })
 }
 
 //exports

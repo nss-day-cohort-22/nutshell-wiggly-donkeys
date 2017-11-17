@@ -2,7 +2,7 @@
 // This file adds some starting structure for our Article Create Form.
 //┌(° ͜ʖ͡°)┘
 
-//the creator requires the articleFactory
+//imports
 const db = require("../Database")
 const articleFactory = require("./articleFactory");
 const articleDOM = require("./articleDOM")
@@ -12,14 +12,16 @@ const articleEl = document.getElementById("articles")
 
 //when the article save button is clicked, take what is in the article text box and store it in db.article, then push to local storage
 function articleStore() {
+    //load database up
     const Database = db.load()
-    
+
     //Create an articles key or make an empty array
     Database.articles = Database.articles || [];
-    
+
     // Sort the articles by their `id` property, descending
     Database.articles.sort((p, n) => n.id - p.id);
 
+    //if statement that makes a happy little factory
     if (event.target.id === "articleForm__saveButt") {
         const newArticle = articleFactory(
             document.querySelector("input[name='articleForm__url']").value,
