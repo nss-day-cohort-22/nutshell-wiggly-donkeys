@@ -28,9 +28,9 @@ const writeTask = () => {
         taskOut.addEventListener("click", taskDelete)
         taskOut.addEventListener("keyup", taskEdit)
 
-    })
+    }
     // db.save(Database);
 
-}
+
 
 module.exports = writeTask
