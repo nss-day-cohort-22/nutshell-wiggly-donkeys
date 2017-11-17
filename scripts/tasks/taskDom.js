@@ -25,6 +25,7 @@ const writeTask = () => {
                 }
         })
         taskOut.addEventListener("click", taskDelete)
+
         taskOut.addEventListener("keydown", taskEdit)
     }
 
